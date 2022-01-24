@@ -138,7 +138,7 @@
                   <div class="row mb-3">
                     <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainerEmail" type="text" class="form-control" id="trainerEmail" value="{{$trainer->trainerEmail}}">
+                      <input name="trainerEmail" type="text" class="form-control" id="trainerEmail" value="{{$trainer->trainerEmail}}" disabled>
                     </div>
                   </div>
 
@@ -152,6 +152,7 @@
                 <!-- Training Session Edit Form -->
                 <form method="post" action="/editTrainingSession">
                   @csrf
+                  @foreach ($trainingSession as $trainingSession)
                   <input type="hidden" name="trainerID" id="trainerID" value="{{$trainingSession->trainerID}}">
 
                   <div class="row mb-3">
@@ -209,10 +210,12 @@
                       <input name="trainingSessionCost" type="text" class="form-control" id="trainingSessionCost" value="{{$trainingSession->trainingSessionCost}}">
                     </div>
                   </div>
-
+                  
                   <div class="text-center">
                     <input class="btn btn-primary" type="submit" value="Save Changes">
                   </div>
+                  <br>
+                  @endforeach
                 </form>
                 <!-- End Table with hoverable rows -->
               </div>

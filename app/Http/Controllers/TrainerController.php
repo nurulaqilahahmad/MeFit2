@@ -122,14 +122,24 @@ class TrainerController extends Controller
 
     public function editTrainerProfile(Request $request)
     {
-        DB::table('trainers')->where('trainerID', $request->trainerID)->update([
-            'trainerImage' => $request->trainerImage,
-            'trainerFullname' => $request->trainerFullname,
-            'trainerUsername' => $request->trainerUsername,
-            'trainerDescription' => $request->trainerDescription,
-            'trainerTelno' => $request->trainerTelno,
-            'trainerEmail' => $request->trainerEmail,
-        ]);
+        $trainer = Trainer::find($request->trainerID);
+
+        $trainer->trainerFullname = $request->trainerFullname;
+        $trainer->trainerUsername = $request->trainerUsername;
+        $trainer->trainerDescription = $request->trainerDescription;
+        $trainer->trainerTelno = $request->trainerTelno;
+        $trainer->trainerEmail = $request->trainerEmail;
+
+        if($request->hasFile('trainerImage'))
+        {
+            $trainerImage = $request->file('trainerImage');
+            $extention = $trainerImage->getClientOriginalExtension();
+            $filename = time() . '.' . $extention;
+            $trainerImage->move('assets/img/', $filename);
+            $trainer->trainerImage = $filename;
+        }
+
+        $trainer->update();
 
         return redirect('trainer_Profile')->with('success', 'Your profile has updated');
     }
