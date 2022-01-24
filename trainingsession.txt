@@ -1,0 +1,39 @@
+<!--Training Session-->
+                <div class="tab-content pt-2">
+
+                  <div class="tab-pane fade show active profile-overview" id="training-session">
+                    <br>
+                    <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label ">Description</div>
+                      <div class="col-lg-9 col-md-8">{{$trainingSession->trainingSessionDescription}}</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label ">Trained by</div>
+                      <div class="col-lg-9 col-md-8">{{$trainer->trainerFullname}}</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Contact</div>
+                      <div class="col-lg-9 col-md-8">{{$trainer->trainerTelno}}</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Time</div>
+                      <div class="col-lg-9 col-md-8">{{$trainingSession->trainingSessionTime}}</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Day</div>
+                      <div class="col-lg-9 col-md-8">{{$trainingSession->trainingSessionDay}}</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Cost</div>
+                      <div class="col-lg-9 col-md-8">{{$trainingSession->trainingSessionCost}}</div>
+                    </div>
+                    <br>
+                  </div>
+                  <!--End of Training Session-->

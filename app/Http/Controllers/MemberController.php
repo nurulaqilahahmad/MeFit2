@@ -1,0 +1,164 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\Member;
+use App\Models\MembershipPlan;
+use App\Models\Trainer;
+use App\Models\TrainingSession;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+
+class MemberController extends Controller
+{
+    public function viewMemberIndex() {
+        $member = array();
+        $membershipPlan = array();
+        if(Session::has('memberID')) {
+            $member = Member::where('memberID', '=', Session::get('memberID'))->first();
+            $membershipPlan = MembershipPlan::get(); 
+        }
+        return view('member_Index', compact('member', 'membershipPlan'));        
+    }
+
+    public function viewTrainingSessionList() {
+        $member = array();
+        $trainingSession = array();
+        if(Session::has('memberID')) {
+            $member = Member::where('memberID', '=', Session::get('memberID'))->first();
+            $trainingSession = DB::table('training_sessions')->where('trainingSessionName', '!=', null)->get(); 
+        }
+        return view('member_TrainingSessionList', compact('member', 'trainingSession'));
+    }
+    
+    public function viewMemberSignUp() {
+        return view('member_SignUp');
+    }
+
+    public function memberCreate (Request $request) {
+        $member = new Member();
+        $member->memberFullname = request('memberFullname');
+        $member->memberEmail = request('memberEmail');
+        $member->memberUsername = request('memberUsername');
+        $member->memberTelno = request('memberTelno');
+        $member->memberPassword = Hash::make($request->memberPassword);
+        $member->memberImage = 'assets/img/team/defaultProfilePicture.jfif';
+        $registered = $member->save();
+        if($registered){
+            return redirect('member_SignIn')->with('success', 'You have successfully registered. You can now sign in.');
+        }
+        else{
+            return back()->with('fail', 'Something went wrong. Try again.');
+        }
+    }
+
+    public function viewMemberSignIn() {
+        return view('member_SignIn');
+    }
+
+    public function memberSignIn(Request $request) {
+        $request->validate([
+            'memberEmail' => 'required',
+            'memberPassword' => 'required'
+        ]);
+
+        $member = Member::where('memberEmail', '=', $request->memberEmail)->first();
+        if($member) {
+            if(Hash::check($request->memberPassword, $member->memberPassword)){
+                $request->session()->put('memberID', $member->memberID);
+                return redirect('member_Index');
+            }
+            else {
+                return back()->with('fail', 'Your password is wrong. Try again');
+            }
+        }
+        else {
+            return back()->with('fail', 'Your email is wrong. Try again');
+        }
+    }
+
+    public function viewMemberForgotPassword() {
+        return view('member_ForgotPassword');
+    }
+
+    public function memberForgotPassword(Request $request) {
+        $request->validate([
+            'memberEmail' => 'required',
+            'newPassword' => 'required'
+        ]);
+
+        $member = Member::where('memberEmail', '=', $request->memberEmail)->first();
+        if($member) {
+            $member->memberPassword = Hash::make($request->newPassword);
+            $member->update();
+            return redirect('member_SignIn')->with('success', 'You have successfully changed password. You can now sign in.');
+        }
+        else {
+            return back()->with('fail', 'Your email is wrong. Try again.');
+        }
+    }
+
+    public function viewMemberProfile() {
+        $member = array();
+        $membershipPlan = array();
+        if(Session::has('memberID')) {
+            $member = Member::where('memberID', '=', Session::get('memberID'))->first();
+            $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', '=', $member->membershipPlanID)
+            ->get();
+        }
+        return view('member_Profile', compact('member', 'membershipPlan'));        
+    }
+
+    public function viewMemberProfileSettings() {
+        $member = array();
+        $membershipPlan = array();
+        if(Session::has('memberID')) {
+            $member = Member::where('memberID', '=', Session::get('memberID'))->first();
+            $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', '=', $member->membershipPlanID)
+            ->get();
+        }
+        return view('member_ProfileSettings', compact('member', 'membershipPlan'));
+    }
+
+    public function editMemberProfile(Request $request) {
+        DB::table('members')->where('memberID', $request->memberID)->update([
+            'memberImage' => $request->memberImage,
+            'memberFullname' => $request->memberFullname,
+            'memberUsername' => $request->memberUsername,
+            'memberDescription' => $request->memberDescription,
+            'memberTelno' => $request->memberTelno,
+            'memberEmail' => $request->memberEmail,
+        ]);
+
+        return redirect('member_Profile')->with('success', 'Your profile has updated');
+    }
+
+    public function bookTrainingSession(Request $request) {
+        DB::table('members')->where('memberID', $request->memberID)->update([
+            'trainingSessionID' => $request->trainingSessionID,
+        ]);
+
+        return redirect('member_Profile')->with('success', 'You have successfully booked a training session');
+    }
+
+    public function viewTrainerProfile($trainerID) {
+        $member = array();
+        $trainer = array();
+        $trainingSession = array();
+        if (Session::has('memberID')) {
+            $member = Member::where('memberID', '=', Session::get('memberID'))->first();
+            $trainer = Trainer::where('trainerID', '=', $trainerID)->first();
+            $trainingSession = DB::table('training_sessions')->where('trainerID', '=', $trainerID)
+            ->get();
+        }
+        return view('member_TrainerProfile', compact('trainer', 'trainingSession', 'member'));
+    }
+
+    public function memberSignOut() {
+        if(Session::has('memberID')) {
+            Session::pull('memberID');        
+            return redirect('member_SignIn');
+        }
+    }
+}
