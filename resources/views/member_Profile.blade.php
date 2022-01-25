@@ -150,55 +150,219 @@
                 </div>
                 <hr>
                 <div class="row">
+                  @foreach ($schedule as $schedule)
                   @if($schedule->trainingSessionDay['Monday'])
                   <div class="col-lg-3 col-md-4"><b>Monday</b></div>
-                  <div class="col-lg-3 col-md-4"></div>
-                  <div class="col-lg-3 col-md-4"></div>
-                  <div class="col-lg-3 col-md-4"></div>
+                    @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif                  
+                  </div>
                 </div> 
                 <br>
                 <div class="row">
+                  @elseif($schedule->trainingSessionDay['Tuesday'])
                   <div class="col-lg-3 col-md-4"><b>Tuesday</b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif
                 </div> 
                 <br> 
                 <div class="row">
+                  @elseif($schedule->trainingSessionDay['Wednesday'])
                   <div class="col-lg-3 col-md-4"><b>Wednesday</b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif
                 </div> 
                 <br> 
                 <div class="row">
+                  @elseif($schedule->trainingSessionDay['Thursday'])
                   <div class="col-lg-3 col-md-4"><b>Thursday</b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif
                 </div> 
                 <br> 
                 <div class="row">
+                  @elseif($schedule->trainingSessionDay['Friday'])
                   <div class="col-lg-3 col-md-4"><b>Friday</b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif
                 </div> 
                 <br> 
                 <div class="row">
+                  @elseif($schedule->trainingSessionDay['Saturday'])
                   <div class="col-lg-3 col-md-4"><b>Saturday</b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif
                 </div> 
                 <br> 
                 <div class="row">
+                  @elseif($schedule->trainingSessionDay['Sunday'])
                   <div class="col-lg-3 col-md-4"><b>Sunday</b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                  <div class="col-lg-3 col-md-4"><b></b></div>
-                </div> 
-                <br>              
+                  @if(($schedule->trainingSessionStartTime>=8) && ($schedule->trainingSessionStartTime<12))
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=12) && ($schedule->trainingSessionStartTime<14))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                      <div class="col-lg-3 col-md-4"></div>
+                    @elseif(($schedule->trainingSessionStartTime>=14) && ($schedule->trainingSessionStartTime<23))
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4"></div>
+                      <div class="col-lg-3 col-md-4">
+                        {{$schedule->trainingSessionName}}<br>
+                        {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                        {{$schedule->trainerFullname}}
+                      </div>
+                    @endif
+                </div>
+                  @endif
+                <br>
+                @endforeach             
               </div>
               <!--End of Schedule-->
             </div>
