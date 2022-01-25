@@ -149,10 +149,10 @@
               </div>
 
               <div class="tab-pane fade pt-3" id="schedule-settings">
-                <!-- Training Session Edit Form -->
+                <!-- Training Session Edit Form -->                
+                @foreach ($trainingSession as $trainingSession)
                 <form method="post" action="/editTrainingSession">
                   @csrf
-                  @foreach ($trainingSession as $trainingSession)
                   <input type="hidden" name="trainerID" id="trainerID" value="{{$trainingSession->trainerID}}">
 
                   <div class="row mb-3">
@@ -215,8 +215,8 @@
                     <input class="btn btn-primary" type="submit" value="Save Changes">
                   </div>
                   <br>
-                  @endforeach
                 </form>
+                @endforeach
                 <!-- End Table with hoverable rows -->
               </div>
             </div>

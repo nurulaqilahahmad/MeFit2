@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Trainer;
 use App\Models\TrainingSession;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
@@ -123,12 +124,17 @@ class TrainerController extends Controller
     public function editTrainerProfile(Request $request)
     {
         $trainer = Trainer::find($request->trainerID);
+        $trainingSession = TrainingSession::find($request->trainerID);
+        $schedule = Schedule::find($request->trainerID);
 
         $trainer->trainerFullname = $request->trainerFullname;
         $trainer->trainerUsername = $request->trainerUsername;
         $trainer->trainerDescription = $request->trainerDescription;
         $trainer->trainerTelno = $request->trainerTelno;
         $trainer->trainerEmail = $request->trainerEmail;
+        $trainingSession->trainerFullname = $request->trainerFullname;
+        $trainingSession->trainerTelno = $request->trainerTelno;
+        $schedule->trainerFullname = $request->trainerFullname;
 
         if($request->hasFile('trainerImage'))
         {
@@ -140,9 +146,13 @@ class TrainerController extends Controller
         }
 
         $trainer->update();
+        $trainingSession->update();
+        $schedule->update();
 
         return redirect('trainer_Profile')->with('success', 'Your profile has updated');
     }
+
+    public function addTrainingSession() {}
 
     public function editTrainingSession(Request $request)
     {
@@ -154,6 +164,14 @@ class TrainerController extends Controller
             'trainingSessionDay' => $request->trainingSessionDay,
             'trainingSessionCost' => $request->trainingSessionCost,
         ]);
+        
+        $schedule = Schedule::find($request->trainerID);
+        $schedule->trainingSessionName = $request->trainingSessionName;
+        $schedule->trainingSessionStartTime = $request->trainingSessionStartTime;
+        $schedule->trainingSessionEndTime = $request->trainingSessionEndTime;
+        $schedule->trainingSessionDay = $request->trainingSessionDay;
+        $schedule->update();
+
         return redirect('trainer_Profile')->with('success', 'Your training session has updated');
     }
 
