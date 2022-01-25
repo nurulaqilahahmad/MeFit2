@@ -17,7 +17,7 @@ class CreateTrainingSessionsTable extends Migration
             $table->id('trainingSessionID');
             $table->string('trainingSessionName')->nullable();
             $table->text('trainingSessionDescription')->nullable();
-            $table->bigint('trainerID')->nullable();
+            $table->bigInteger('trainerID')->nullable();
             $table->string('trainerFullname')->nullable();
             $table->string('trainerTelno')->nullable();
             $table->double('trainingSessionCost')->nullable();

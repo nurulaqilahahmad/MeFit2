@@ -5,6 +5,7 @@ use App\Models\Member;
 use App\Models\MembershipPlan;
 use App\Models\Trainer;
 use App\Models\TrainingSession;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
@@ -110,12 +111,20 @@ class MemberController extends Controller
     public function viewMemberProfile() {
         $member = array();
         $membershipPlan = array();
+        $schedule = array();
+        $trainer = array();
+        $trainingSession = array();
         if(Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
             $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', $member->membershipPlanID)
             ->first();
+            $schedule = DB::table('schedules')->where('memberID', '=', $member->memberID)
+            ->join('training_sessions', 'training_sessions.trainingSessionID', '=', 'schedules.trainingSessionID')
+            ->get();
+            // $trainer = DB::table('trainers')->where('trainerID', '=', $schedule->trainerID)->first();
+            // $trainingSession = DB::table('training_sessions')->where('trainerID', '=', $schedule->trainerID)->get()->first();
         }
-        return view('member_Profile', compact('member', 'membershipPlan'));        
+        return view('member_Profile', compact('member', 'membershipPlan', 'schedule'));        
     }
 
     public function viewMemberProfileSettings() {
@@ -146,6 +155,16 @@ class MemberController extends Controller
         DB::table('members')->where('memberID', $request->memberID)->update([
             'trainingSessionID' => $request->trainingSessionID,
         ]);
+
+        $schedule = new Schedule();
+        $schedule->trainingSessionName = $request->trainingSessionName;
+        $schedule->trainingSessionStartTime = $request->trainingSessionStartTime;
+        $schedule->trainingSessionEndTime = $request->trainingSessionEndTime;
+        $schedule->trainingSessionDay = $request->trainingSessionDay;
+        $schedule->trainingSessionID = $request->trainingSessionID;
+        $schedule->trainerID = $request->trainerID;
+        $schedule->memberID = $request->memberID;
+        $schedule->save();
 
         return redirect('member_Profile')->with('success', 'You have successfully booked a training session');
     }

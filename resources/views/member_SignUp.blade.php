@@ -42,7 +42,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <img src="assets/img/logoMF.png" alt="">
                 <span>MeFit</span>
             </a>
@@ -114,7 +114,7 @@
             </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{url('assets/img/SignUp.png')}}" class="img-fluid" alt="">
+            <img src="{{url('assets/img/Gym.png')}}" class="img-fluid" alt="">
         </div>
         </div>
         </div>

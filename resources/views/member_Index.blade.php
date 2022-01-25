@@ -76,7 +76,7 @@
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
                             <a href="#pricing" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                <span>Get Started</span>
+                                <span>Subscribe</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
@@ -104,20 +104,23 @@
 
             <div class="row gy-4" data-aos="fade-left">
                 @foreach ($membershipPlan as $membershipPlan)
+                <form action="/memberMembershipPlan" method="post">
+                @csrf
+                <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
+                <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box" display="table-cell">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
-                        <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
+                        <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
                         <ul>
                             <li>{{$membershipPlan->membershipPlanDescription}}</li>
                         </ul>
-                        <a href="/memberMembershipPlan" class="btn-buy">Let's do it!</a>
+                        <input class="btn-buy" type="submit" value="Let's do it!">
                     </div>
                 </div>
+                </form>
                 @endforeach
-                
-
             </div>
 
         </div>

@@ -7,6 +7,7 @@ use App\Models\Trainer;
 use App\Models\TrainingSession;
 use App\Models\Member;
 use App\Models\MembershipPlan;
+use App\Models\Schedule;
 use Illuminate\Support\Facades\Crypt;
 
 /*
@@ -48,6 +49,7 @@ Route::get('/member_SignUp', [MemberController::class, 'viewMemberSignUp'])->nam
 Route::post('/memberCreate', [MemberController::class, 'memberCreate'])->name('memberCreate');
 Route::get('/member_ForgotPassword', [MemberController::class, 'viewMemberForgotPassword'])->name('member_ForgotPassword');
 Route::post('/memberForgotPassword', [MemberController::class, 'memberForgotPassword'])->name('memberForgotPassword');
+Route::post('/memberMembershipPlan', [MemberController::class, 'memberMembershipPlan'])->name('memberMembershipPlan');
 Route::get('/member_Profile', [MemberController::class, 'viewMemberProfile'])->name('member_Profile');
 Route::get('/member_ProfileSettings', [MemberController::class, 'viewMemberProfileSettings'])->name('member_ProfileSettings');
 Route::post('/editMemberProfile', [MemberController::class, 'editMemberProfile'])->name('editMemberProfile');

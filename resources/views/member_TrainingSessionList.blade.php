@@ -81,6 +81,11 @@
                         @csrf
                         <input type="hidden" name="trainingSessionID" id="trainingSessionID" value="{{$trainingSession->trainingSessionID}}">
                         <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
+                        <input type="hidden" name="trainerID" id="trainerID" value="{{$trainingSession->trainerID}}">
+                        <input type="hidden" name="trainingSessionStartTime" id="trainingSessionStartTime" value="{{$trainingSession->trainingSessionStartTime}}">
+                        <input type="hidden" name="trainingSessionEndTime" id="trainingSessionEndTime" value="{{$trainingSession->trainingSessionEndTime}}">
+                        <input type="hidden" name="trainingSessionDay" id="trainingSessionDay" value="{{$trainingSession->trainingSessionDay}}">
+                        <input type="hidden" name="trainingSessionName" id="trainingSessionName" value="{{$trainingSession->trainingSessionName}}">
                         <h3 style="color: #07d5c0;">{{$trainingSession->trainingSessionName}}</h3>
                         <div class="price"><sup>RM</sup>{{$trainingSession->trainingSessionCost}}<span> / mo</span></div>
                         <ul>
