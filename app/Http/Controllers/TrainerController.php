@@ -164,13 +164,13 @@ class TrainerController extends Controller
             'trainingSessionDay' => $request->trainingSessionDay,
             'trainingSessionCost' => $request->trainingSessionCost,
         ]);
-        
-        $schedule = Schedule::find($request->trainingSessionID);
-        $schedule->trainingSessionName = $request->trainingSessionName;
-        $schedule->trainingSessionStartTime = $request->trainingSessionStartTime;
-        $schedule->trainingSessionEndTime = $request->trainingSessionEndTime;
-        $schedule->trainingSessionDay = $request->trainingSessionDay;
-        $schedule->update();
+
+        DB::table('schedules')->where('trainingSessionID', $request->trainingSessionID)->update([
+            'trainingSessionName' => $request->trainingSessionName,
+            'trainingSessionStartTime' => $request->trainingSessionStartTime,
+            'trainingSessionEndTime' => $request->trainingSessionEndTime,
+            'trainingSessionDay' => $request->trainingSessionDay,
+        ]);
 
         return redirect('trainer_Profile')->with('success', 'Your training session has updated');
     }
