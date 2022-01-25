@@ -90,63 +90,63 @@
 
               <!-- Profile Edit Form -->
               <div class="tab-pane fade show active profile-edit" id="profile-edit">
-              <form method="post" action="/editTrainingSession">
+              <form method="post" action="/addTrainingSession">
                   @csrf
                   <input type="hidden" name="trainerID" id="trainerID" value="{{$trainer->trainerID}}">
                   <input type="hidden" name="trainingSessionID" id="trainingSessionID" value="{{$trainingSession->trainingSessionID}}">
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Training Session Name</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainingSessionName" type="text" class="form-control" id="trainingSessionName" value="{{$trainingSession->trainingSessionName}}">
+                      <input name="trainingSessionName" type="text" class="form-control" id="trainingSessionName">
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Description</label>
                     <div class="col-md-8 col-lg-9">
-                      <textarea name="trainingSessionDescription" class="form-control" id="trainingSessionDescription" style="height: 100px">{{$trainingSession->trainingSessionDescription}}</textarea>
+                      <textarea name="trainingSessionDescription" class="form-control" id="trainingSessionDescription" style="height: 100px"></textarea>
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Trained by</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainerFullname" type="text" class="form-control" id="trainerFullname" value="{{$trainingSession->trainerFullname}}" disabled>
+                      <input name="trainerFullname" type="text" class="form-control" id="trainerFullname" disabled>
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Contact</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainerTelno" type="text" class="form-control" id="trainerTelno" value="{{$trainingSession->trainerTelno}}" disabled>
+                      <input name="trainerTelno" type="text" class="form-control" id="trainerTelno" disabled>
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Start Time</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainingSessionStartTime" type="time" class="form-control" id="trainingSessionStartTime" value="{{$trainingSession->trainingSessionStartTime}}">
+                      <input name="trainingSessionStartTime" type="time" class="form-control" id="trainingSessionStartTime">
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">End Time</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainingSessionEndTime" type="time" class="form-control" id="trainingSessionEndTime" value="{{$trainingSession->trainingSessionEndTime}}">
+                      <input name="trainingSessionEndTime" type="time" class="form-control" id="trainingSessionEndTime">
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Day</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainingSessionDay" type="text" class="form-control" id="trainingSessionDay" value="{{$trainingSession->trainingSessionDay}}">
+                      <input name="trainingSessionDay" type="text" class="form-control" id="trainingSessionDay">
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Cost</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainingSessionCost" type="text" class="form-control" id="trainingSessionCost" value="{{$trainingSession->trainingSessionCost}}">
+                      <input name="trainingSessionCost" type="text" class="form-control" id="trainingSessionCost">
                     </div>
                   </div>
                   
