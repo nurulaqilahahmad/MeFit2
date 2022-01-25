@@ -174,12 +174,11 @@
                       {{$schedule->trainerFullname}}
                     @endif
                   </div>
-                  @endif
                 </div>
                 <br>
                 <div class="row">
                   <div class="col-lg-3 col-md-4 label"><b>Thursday</b></div>
-                  @if($schedule->trainingSessionDay=='Thursday')
+                  @elseif($schedule->trainingSessionDay=='Thursday')
                   <div class="col-lg-3 col-md-4">
                     @if(($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8))
                       {{$schedule->trainingSessionName}}<br>
