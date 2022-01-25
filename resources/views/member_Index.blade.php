@@ -108,7 +108,7 @@
                 @csrf
                 <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
                 <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box" display="table-cell">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
