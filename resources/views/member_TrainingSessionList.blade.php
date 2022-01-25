@@ -74,10 +74,10 @@
             </header>
 
             <div class="col" data-aos="fade-left">
-                @foreach ($trainingSession as $trainingSession)
                 <div class="row-lg-3 row-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    @foreach ($trainingSession as $trainingSession)
                     <div class="box">
-                        <form action="/bookTrainingSession" method="post"></form>
+                        <form action="/bookTrainingSession" method="post">
                         @csrf
                         <input type="hidden" name="trainingSessionID" id="trainingSessionID" value="{{$trainingSession->trainingSessionID}}">
                         <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
@@ -88,12 +88,12 @@
                             <li>{{$trainingSession->trainingSessionStartTime}} - {{$trainingSession->trainingSessionEndTime}}</li>
                             <li>{{$trainingSession->trainingSessionDay}}</li>
                         </ul>
-                        <input class="btn-buy" type="submit"value="Book">
+                        <input class="btn-buy" type="submit" value="Book">
                         </form>
                     </div>
+                    <br>
+                    @endforeach
                 </div>
-                <br>
-                @endforeach
             </div>
 
         </div>

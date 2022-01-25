@@ -99,13 +99,21 @@ class MemberController extends Controller
         }
     }
 
+    public function memberMembershipPlan(Request $request) {
+        DB::table('members')->where('memberID', $request->memberID)->update([
+            'membershipPlanID' => $request->membershipPlanID
+        ]);
+
+        return redirect('member_Profile')->with('success', 'You have successfully subscribe a plan');
+    }
+
     public function viewMemberProfile() {
         $member = array();
         $membershipPlan = array();
         if(Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
-            $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', '=', $member->membershipPlanID)
-            ->get();
+            $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', $member->membershipPlanID)
+            ->first();
         }
         return view('member_Profile', compact('member', 'membershipPlan'));        
     }
