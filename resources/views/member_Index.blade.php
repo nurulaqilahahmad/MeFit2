@@ -104,10 +104,6 @@
 
             @foreach ($membershipPlan as $membershipPlan)
             <div class="row gy-4" data-aos="fade-left">                
-                <form action="/memberMembershipPlan" method="post">
-                @csrf
-                <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
-                <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
                 <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box" display="table-cell">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
@@ -116,10 +112,14 @@
                         <ul>
                             <li>{{$membershipPlan->membershipPlanDescription}}</li>
                         </ul>
+                        <form action="/memberMembershipPlan" method="post">
+                        @csrf
+                        <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
+                        <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
                         <input class="btn-buy" type="submit" value="Let's do it!">
+                        </form>
                     </div>
                 </div>
-                </form>
             </div>
             @endforeach
 
