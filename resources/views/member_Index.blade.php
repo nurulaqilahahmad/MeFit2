@@ -112,12 +112,6 @@
                         <ul>
                             <li>{{$membershipPlan->membershipPlanDescription}}</li>
                         </ul>
-                        <form action="/memberMembershipPlan" method="post">
-                        @csrf
-                        <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
-                        <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
-                        <input class="btn-buy" type="submit" value="Let's do it!">
-                        </form>
                     </div>
                 </div>
             </div>
