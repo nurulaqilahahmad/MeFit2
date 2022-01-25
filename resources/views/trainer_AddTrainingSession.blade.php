@@ -50,7 +50,7 @@
       <nav id="navbar" class="navbar">
         <ul>
 
-          <li class="dropdown"><a href="#"><span>{{$trainer-trainerUsername}}</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>{{$trainer->trainerUsername}}</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="trainer_Profile">Profile</a></li>
               <li><a href="trainer_ProfileSettings">Profile Settings</a></li>
