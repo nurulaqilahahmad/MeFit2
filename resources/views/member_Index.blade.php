@@ -141,7 +141,7 @@
 
             <div class="row gy-4">
             <div class="text-center text-lg-start">
-              <a href="member_TrainingSessionList" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <a href="member_TrainingSessionList" class="btn-buy">
                 <span>See List</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
