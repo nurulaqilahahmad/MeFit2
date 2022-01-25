@@ -143,7 +143,6 @@ class MemberController extends Controller
         }
         
         DB::table('members')->where('memberID', $request->memberID)->update([
-            'memberImage' => $filename,
             'memberFullname' => $request->memberFullname,
             'memberUsername' => $request->memberUsername,
             'memberDescription' => $request->memberDescription,
