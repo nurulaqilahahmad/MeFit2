@@ -141,6 +141,7 @@ class MemberController extends Controller
             $memberImage->move('assets/img/', $filename);
             $member->memberImage = $filename;
         }
+        $member->save();
         
         DB::table('members')->where('memberID', $request->memberID)->update([
             'memberFullname' => $request->memberFullname,
@@ -150,7 +151,7 @@ class MemberController extends Controller
             'memberEmail' => $request->memberEmail,
         ]);
 
-        $member->save();
+        
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');
     }
