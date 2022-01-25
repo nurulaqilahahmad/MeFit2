@@ -102,8 +102,8 @@
                 <p>Check our Pricing</p>
             </header>
 
-            @foreach ($membershipPlan as $membershipPlan)
-            <div class="row gy-4" data-aos="fade-left">                
+            <div class="row gy-4" data-aos="fade-left"> 
+                @foreach ($membershipPlan as $membershipPlan)               
                 <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box" display="table-cell">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
@@ -114,8 +114,8 @@
                         </ul>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
 
         </div>
 
