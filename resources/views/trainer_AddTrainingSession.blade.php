@@ -93,7 +93,6 @@
               <form method="post" action="/addTrainingSession">
                   @csrf
                   <input type="hidden" name="trainerID" id="trainerID" value="{{$trainer->trainerID}}">
-                  <input type="hidden" name="trainingSessionID" id="trainingSessionID" value="{{$trainingSession->trainingSessionID}}">
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Training Session Name</label>
                     <div class="col-md-8 col-lg-9">
