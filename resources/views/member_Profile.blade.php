@@ -175,11 +175,9 @@
                     @endif
                   </div>
                   @endif
-                  @endforeach
                 </div>
                 <br>
                 <div class="row">
-                  @foreach($schedule as $schedule)
                   <div class="col-lg-3 col-md-4 label"><b>Thursday</b></div>
                   @if($schedule->trainingSessionDay=='Thursday')
                   <div class="col-lg-3 col-md-4">
