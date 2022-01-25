@@ -143,74 +143,61 @@
               <!--Schedule-->
               <div class="tab-pane fade show profile-overview" id="schedule">
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Monday</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Tuesday</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Wednesday</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Thursday</b></div>
-                  <div class="col-lg-1 col-md-1"><b>Friday</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Saturday</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Sunday</b></div>
+                  <div class="col-lg-2 col-md-2"><b>Day / Time</b></div>
+                  <div class="col-lg-2 col-md-2"><b>Morning</b></div>
+                  <div class="col-lg-2 col-md-2"><b>Afternoon</b></div>
+                  <div class="col-lg-2 col-md-2"><b>Evening</b></div>
                 </div>
                 <hr>
                 <div class="row">
-                  @foreach ($schedule as $schedule)
-                  <div class="col-lg-1 col-md-1 label"><b>Morning</b></div>
-                  @if($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8)
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Monday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Tuesday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Wednesday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Thursday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Friday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Saturday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-1 col-md-1">
-                    @if($schedule->trainingSessionDay=='Sunday')
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  @endif
-                  </div>
-                  @endforeach
-                </div>
+                  <div class="col-lg-2 col-md-2"><b>Monday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
                 <br>
-                
+                <div class="row">
+                  <div class="col-lg-2 col-md-2"><b>Tuesday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
+                <br> 
+                <div class="row">
+                  <div class="col-lg-2 col-md-2"><b>Wednesday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
+                <br> 
+                <div class="row">
+                  <div class="col-lg-2 col-md-2"><b>Thursday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
+                <br> 
+                <div class="row">
+                  <div class="col-lg-2 col-md-2"><b>Friday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
+                <br> 
+                <div class="row">
+                  <div class="col-lg-2 col-md-2"><b>Saturday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
+                <br> 
+                <div class="row">
+                  <div class="col-lg-2 col-md-2"><b>Sunday</b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-2 col-md-2"><b></b></div>
+                </div> 
+                <br>              
               </div>
               <!--End of Schedule-->
             </div>
