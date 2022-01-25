@@ -112,17 +112,11 @@ class MemberController extends Controller
         $member = array();
         $membershipPlan = array();
         $schedule = array();
-        $trainer = array();
-        $trainingSession = array();
         if(Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
             $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', $member->membershipPlanID)
             ->first();
-            $schedule = DB::table('schedules')->where('memberID', '=', $member->memberID)
-            ->join('training_sessions', 'training_sessions.trainingSessionID', '=', 'schedules.trainingSessionID')
-            ->get();
-            // $trainer = DB::table('trainers')->where('trainerID', '=', $schedule->trainerID)->first();
-            // $trainingSession = DB::table('training_sessions')->where('trainerID', '=', $schedule->trainerID)->get()->first();
+            $schedule = DB::table('schedules')->where('memberID', '=', Session::get('memberID'))->get();
         }
         return view('member_Profile', compact('member', 'membershipPlan', 'schedule'));        
     }
