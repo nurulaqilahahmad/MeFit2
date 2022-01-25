@@ -110,14 +110,14 @@
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Trained by</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainerFullname" type="text" class="form-control" id="trainerFullname" disabled>
+                      <input name="trainerFullname" type="text" class="form-control" id="trainerFullname" value="{{$trainer->trainerFullname}}" disabled>
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Contact</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="trainerTelno" type="text" class="form-control" id="trainerTelno" disabled>
+                      <input name="trainerTelno" type="text" class="form-control" id="trainerTelno" value="{{$trainer->trainerTelno}}" disabled>
                     </div>
                   </div>
 
