@@ -143,59 +143,60 @@
               <!--Schedule-->
               <div class="tab-pane fade show profile-overview" id="schedule">
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Day / Time</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Morning</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Afternoon</b></div>
-                  <div class="col-lg-2 col-md-2"><b>Evening</b></div>
+                  <div class="col-lg-3 col-md-4"><b>Day / Time</b></div>
+                  <div class="col-lg-3 col-md-4"><b>Morning</b></div>
+                  <div class="col-lg-3 col-md-4"><b>Afternoon</b></div>
+                  <div class="col-lg-3 col-md-4"><b>Evening</b></div>
                 </div>
                 <hr>
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Monday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  @if($schedule->trainingSessionDay['Monday'])
+                  <div class="col-lg-3 col-md-4"><b>Monday</b></div>
+                  <div class="col-lg-3 col-md-4"></div>
+                  <div class="col-lg-3 col-md-4"></div>
+                  <div class="col-lg-3 col-md-4"></div>
                 </div> 
                 <br>
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Tuesday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b>Tuesday</b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
                 </div> 
                 <br> 
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Wednesday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b>Wednesday</b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
                 </div> 
                 <br> 
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Thursday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b>Thursday</b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
                 </div> 
                 <br> 
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Friday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b>Friday</b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
                 </div> 
                 <br> 
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Saturday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b>Saturday</b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
                 </div> 
                 <br> 
                 <div class="row">
-                  <div class="col-lg-2 col-md-2"><b>Sunday</b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
-                  <div class="col-lg-2 col-md-2"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b>Sunday</b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
+                  <div class="col-lg-3 col-md-4"><b></b></div>
                 </div> 
                 <br>              
               </div>
