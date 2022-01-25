@@ -148,8 +148,8 @@ class MemberController extends Controller
             $memberImage->move('assets/img/', $filename);
             $member->memberImage = $filename;
         }
-        
-        $member->save();
+
+        $member->update();
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');
     }
