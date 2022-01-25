@@ -139,7 +139,6 @@
               <div class="tab-pane fade pt-3" id="training-session">
               <a href="trainer_AddTrainingSession" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Add Training Session</span>
-                <i class="bi bi-arrow-right"></i>
               </a>
               @foreach ($trainingSession as $trainingSession)
                 <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
