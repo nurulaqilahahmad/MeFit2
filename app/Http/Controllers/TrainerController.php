@@ -165,7 +165,7 @@ class TrainerController extends Controller
             'trainingSessionCost' => $request->trainingSessionCost,
         ]);
         
-        $schedule = Schedule::find($request->trainerID);
+        $schedule = Schedule::find($request->trainingSessionID);
         $schedule->trainingSessionName = $request->trainingSessionName;
         $schedule->trainingSessionStartTime = $request->trainingSessionStartTime;
         $schedule->trainingSessionEndTime = $request->trainingSessionEndTime;
