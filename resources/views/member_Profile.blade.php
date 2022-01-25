@@ -150,8 +150,8 @@
                 </div>
                 <hr>
                 <div class="row">
-                  @foreach($schedule as $schedule)
                   <div class="col-lg-3 col-md-4 label"><b>Monday</b></div>
+                  @foreach($schedule as $schedule)
                   @if($schedule->trainingSessionDay=='Monday')
                   <div class="col-lg-3 col-md-4">
                     @if(($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8))
@@ -173,12 +173,15 @@
                       {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
                       {{$schedule->trainerFullname}}
                     @endif
+                  @endif
+                  @endforeach
                   </div>
                 </div>
                 <br>
                 <div class="row">
                   <div class="col-lg-3 col-md-4 label"><b>Thursday</b></div>
-                  @elseif($schedule->trainingSessionDay=='Thursday')
+                  @foreach($schedule as $schedule)
+                  @if($schedule->trainingSessionDay=='Thursday')
                   <div class="col-lg-3 col-md-4">
                     @if(($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8))
                       {{$schedule->trainingSessionName}}<br>
