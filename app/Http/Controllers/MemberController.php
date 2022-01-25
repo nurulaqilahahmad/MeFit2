@@ -133,11 +133,13 @@ class MemberController extends Controller
     }
 
     public function editMemberProfile(Request $request) {
+        $member = Member::find('memberID');
         if($request->hasFile('memberImage')){
             $memberImage = $request->file('memberImage');
             $extention = $memberImage->getClientOriginalExtension();
             $filename = time() . '.' . $extention;
             $memberImage->move('assets/img/', $filename);
+            $member->memberImage = $filename;
         }
         
         DB::table('members')->where('memberID', $request->memberID)->update([
@@ -148,6 +150,8 @@ class MemberController extends Controller
             'memberTelno' => $request->memberTelno,
             'memberEmail' => $request->memberEmail,
         ]);
+
+        $member->save();
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');
     }
