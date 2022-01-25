@@ -37,7 +37,9 @@ Route::get('/trainer_ForgotPassword', [TrainerController::class, 'viewTrainerFor
 Route::post('/trainerForgotPassword', [TrainerController::class, 'trainerForgotPassword'])->name('trainerForgotPassword');
 Route::get('/trainer_Profile', [TrainerController::class, 'viewTrainerProfile'])->name('trainer_Profile');
 Route::get('/trainer_ProfileSettings', [TrainerController::class, 'viewTrainerProfileSettings'])->name('trainer_ProfileSettings');
+Route::get('/trainer_AddTrainingSession', [TrainerController::class, 'viewAddTrainingSession'])->name('trainer_AddTrainingSession');
 Route::post('/editTrainerProfile', [TrainerController::class, 'editTrainerProfile'])->name('editTrainerProfile');
+Route::post('/addTrainingSession', [TrainerController::class, 'addTrainingSession'])->name('addTrainingSession');
 Route::post('/editTrainingSession', [TrainerController::class, 'editTrainingSession'])->name('editTrainingSession');
 Route::get('/trainerSignOut', [TrainerController::class, 'trainerSignOut']);
 

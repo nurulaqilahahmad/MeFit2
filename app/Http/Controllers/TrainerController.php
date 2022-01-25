@@ -121,6 +121,14 @@ class TrainerController extends Controller
         return view('trainer_ProfileSettings', compact('trainer', 'trainingSession'));
     }
 
+    public function viewAddTrainingSession() {
+        $trainer = array();
+        if (Session::has('trainerID')) {
+            $trainer = Trainer::where('trainerID', '=', Session::get('trainerID'))->first();
+        }
+        return view('trainer_AddTrainingSession', compact('trainer'));
+    }
+
     public function editTrainerProfile(Request $request)
     {
         $trainer = Trainer::find($request->trainerID);
@@ -152,7 +160,25 @@ class TrainerController extends Controller
         return redirect('trainer_Profile')->with('success', 'Your profile has updated');
     }
 
-    public function addTrainingSession() {}
+    public function addTrainingSession(Request $request) {
+        $trainingSession = new TrainingSession();
+        $trainingSession->trainingSessionName = $request->trainingSessionName;
+        $trainingSession->trainingSessionDescription = $request->trainingSessionDescription;
+        $trainingSession->trainerID = $request->trainerID;
+        $trainingSession->trainerFullname = $request->trainerFullname;
+        $trainingSession->trainerTelno = $request->trainerTelno;
+        $trainingSession->trainingSessionCost = $request->trainingSessionCost;
+        $trainingSession->trainingSessionStartTime = $request->trainingSessionStartTime;
+        $trainingSession->trainingSessionEndTime = $request->trainingSessionEndTime;
+        $trainingSession->trainingSessionDay = $request->trainingSessionDay;
+        $added = $trainingSession->save();
+
+        if ($added) {
+            return redirect('trainer_Profile')->with('success', 'You have successfully added a training session.');
+        } else {
+            return back()->with('fail', 'Something went wrong. Try again.');
+        }
+    }
 
     public function editTrainingSession(Request $request)
     {
