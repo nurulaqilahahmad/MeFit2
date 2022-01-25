@@ -102,8 +102,8 @@
                 <p>Check our Pricing</p>
             </header>
 
-            <div class="row gy-4" data-aos="fade-left">
-                @foreach ($membershipPlan as $membershipPlan)
+            @foreach ($membershipPlan as $membershipPlan)
+            <div class="row gy-4" data-aos="fade-left">                
                 <form action="/memberMembershipPlan" method="post">
                 @csrf
                 <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
@@ -120,8 +120,8 @@
                     </div>
                 </div>
                 </form>
-                @endforeach
             </div>
+            @endforeach
 
         </div>
 
