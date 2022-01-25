@@ -123,10 +123,11 @@ class TrainerController extends Controller
 
     public function viewAddTrainingSession() {
         $trainer = array();
+        $trainingSession = array();
         if (Session::has('trainerID')) {
             $trainer = Trainer::where('trainerID', '=', Session::get('trainerID'))->first();
         }
-        return view('trainer_AddTrainingSession', compact('trainer'));
+        return view('trainer_AddTrainingSession', compact('trainer', 'trainingSession'));
     }
 
     public function editTrainerProfile(Request $request)
