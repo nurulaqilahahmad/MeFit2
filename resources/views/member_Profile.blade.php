@@ -145,9 +145,9 @@
                 @foreach ($schedule as $schedule)
                 <div class="col">
                   <div class="row-lg-3 row-md-4"><b>{{$schedule->trainingSessionName}}</b></div>
-                  <div class="row-lg-3 row-md-4"><b>Time: </b>{{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndscehdTime}}</div>
-                  <div class="row-lg-3 row-md-4"><b>Day: </b>{{$schedule->trainingSessionDay}}</div>
-                  <div class="row-lg-3 row-md-4"><b>Trainer: </b>{{$schedule->trainerFullname}}</div>
+                  <div class="row-lg-3 row-md-4">Time: {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndscehdTime}}</div>
+                  <div class="row-lg-3 row-md-4">Day: {{$schedule->trainingSessionDay}}</div>
+                  <div class="row-lg-3 row-md-4">Trainer: {{$schedule->trainerFullname}}</div>
                 </div>
                 <hr>
                 @endforeach
