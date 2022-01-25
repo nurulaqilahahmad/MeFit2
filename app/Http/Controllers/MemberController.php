@@ -133,9 +133,11 @@ class MemberController extends Controller
     }
 
     public function editMemberProfile(Request $request) {
+
+        $trainerImage = $request->file('memberImage')->getClientOriginaName();
         
         DB::table('members')->where('memberID', $request->memberID)->update([
-            'memberImage' => $request->file('memberImage')->getClientOriginaName(),
+            'memberImage' => $trainerImage,
             'memberFullname' => $request->memberFullname,
             'memberUsername' => $request->memberUsername,
             'memberDescription' => $request->memberDescription,
