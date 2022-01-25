@@ -156,7 +156,7 @@ class TrainerController extends Controller
 
     public function editTrainingSession(Request $request)
     {
-        DB::table('training_sessions')->where('trainerID', $request->trainerID)->update([
+        DB::table('training_sessions')->where('trainingSessionID', $request->trainingSessionID)->update([
             'trainingSessionName' => $request->trainingSessionName,
             'trainingSessionDescription' => $request->trainingSessionDescription,
             'trainingSessionStartTime' => $request->trainingSessionStartTime,
