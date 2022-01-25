@@ -96,7 +96,6 @@
                   <div class="row mb-3">
                     <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                     <div class="col-md-8 col-lg-9">
-                      <img src="{{$member->memberImage}}" alt="Profile"><br><br>
                       <label for="myfile">Select a file:</label>
                       <input type="file" id="memberImage" name="memberImage" value="{{$member->memberImage}}">
                     </div>
