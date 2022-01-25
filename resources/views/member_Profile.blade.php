@@ -143,10 +143,14 @@
               <!--Schedule-->
               <div class="tab-pane fade show profile-overview" id="schedule">
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label"><b>Date / Time</b></div>
-                  <div class="col-lg-3 col-md-4"><b>Morning</b></div>
-                  <div class="col-lg-3 col-md-4"><b>Afternoon</b></div>
-                  <div class="col-lg-3 col-md-4"><b>Evening</b></div>
+                  <div class="col-lg-2 col-md-2 label"><b>Time / Date</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Monday</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Tuesday</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Wednesday</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Thursday</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Friday</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Saturday</b></div>
+                  <div class="col-lg-1 col-md-1"><b>Sunday</b></div>
                 </div>
                 <hr>
                 <div class="row">
