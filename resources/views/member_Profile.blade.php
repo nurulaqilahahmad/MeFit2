@@ -154,58 +154,64 @@
                 </div>
                 <hr>
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label"><b>Monday</b></div>
-                  @if($schedule->trainingSessionDay=='Monday')
-                  <div class="col-lg-3 col-md-4">
-                    @if(($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8))
+                  @foreach ($schedule as $schedule)
+                  <div class="col-lg-1 col-md-1 label"><b>Morning</b></div>
+                  @if($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8)
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Monday')
                       {{$schedule->trainingSessionName}}<br>
                       {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
                       {{$schedule->trainerFullname}}
                     @endif
                   </div>
-                  <div class="col-lg-3 col-md-4">
-                    @if(($schedule->trainingSessionStartTime<14) && ($schedule->trainingSessionStartTime>=12))
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Tuesday')
                       {{$schedule->trainingSessionName}}<br>
                       {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
                       {{$schedule->trainerFullname}}
                     @endif
                   </div>
-                  <div class="col-lg-3 col-md-4">
-                    @if(($schedule->trainingSessionStartTime<23) && ($schedule->trainingSessionStartTime>=14))
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Wednesday')
                       {{$schedule->trainingSessionName}}<br>
                       {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
                       {{$schedule->trainerFullname}}
                     @endif
+                  </div>
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Thursday')
+                      {{$schedule->trainingSessionName}}<br>
+                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                      {{$schedule->trainerFullname}}
+                    @endif
+                  </div>
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Friday')
+                      {{$schedule->trainingSessionName}}<br>
+                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                      {{$schedule->trainerFullname}}
+                    @endif
+                  </div>
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Saturday')
+                      {{$schedule->trainingSessionName}}<br>
+                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                      {{$schedule->trainerFullname}}
+                    @endif
+                  </div>
+                  <div class="col-lg-1 col-md-1">
+                    @if($schedule->trainingSessionDay=='Sunday')
+                      {{$schedule->trainingSessionName}}<br>
+                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
+                      {{$schedule->trainerFullname}}
+                    @endif
+                  </div>
                   @endif
                   </div>
+                  @endforeach
                 </div>
                 <br>
-                <div class="row">
-                  <div class="col-lg-3 col-md-4 label"><b>Thursday</b></div>
-                  @if($schedule->trainingSessionDay=='Thursday')
-                  <div class="col-lg-3 col-md-4">
-                    @if(($schedule->trainingSessionStartTime<12) && ($schedule->trainingSessionStartTime>=8))
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-3 col-md-4">
-                    @if(($schedule->trainingSessionStartTime<14) && ($schedule->trainingSessionStartTime>=12))
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  <div class="col-lg-3 col-md-4">
-                    @if(($schedule->trainingSessionStartTime<23) && ($schedule->trainingSessionStartTime>=14))
-                      {{$schedule->trainingSessionName}}<br>
-                      {{$schedule->trainingSessionStartTime}} - {{$schedule->trainingSessionEndTime}}<br>
-                      {{$schedule->trainerFullname}}
-                    @endif
-                  </div>
-                  @endif
-                </div>
+                
               </div>
               <!--End of Schedule-->
             </div>
