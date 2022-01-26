@@ -141,9 +141,7 @@
             </header>
 
             <div class="row gy-4">
-                <div class="text-center text-lg-start">
                 <a href="member_SignIn" class="btn-buy">See List <i class="bi bi-arrow-right"></i></a>
-                </div>
             </div>
         </div>
 
