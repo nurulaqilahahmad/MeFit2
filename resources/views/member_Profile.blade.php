@@ -155,6 +155,7 @@
                 </div>
                 <hr>
                 @endforeach
+              </div>
               <!--End of Schedule-->
 
               <!--Payment-->
