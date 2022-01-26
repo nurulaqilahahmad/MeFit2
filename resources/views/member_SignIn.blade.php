@@ -101,7 +101,7 @@
                         </form>
                         <div class="row">
                             <div class="col form-group">
-                                <span data-aos="fade-up"> First Time? </span><span><a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
+                                <span data-aos="fade-up"> First Time? <a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
                                 <br><br>
                             </div>
                         </div>
