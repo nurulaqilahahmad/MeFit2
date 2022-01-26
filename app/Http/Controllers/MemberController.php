@@ -137,24 +137,25 @@ class MemberController extends Controller
     }
 
     public function editMemberProfile(Request $request) {
-        // if($request->hasFile('memberImage')){
-        //     $memberImage = $request->file('memberImage');
-        //     $extention = $memberImage->getClientOriginalExtension();
-        //     $filename = time() . '.' . $extention;
-        //     $memberImage->move('assets/img/', $filename);
-        // }
+        $member = Member::where('memberEmail', '=', $request->memberEmail)->first();
 
-        $memberImage = time().'.'.$request->memberImage->getClientOriginalExtension();     
-        $request->image->move(public_path('images'), $memberImage);
+        if($request->hasFile('memberImage'))
+        {
+            $memberImage = $request->file('memberImage');
+            $extention = $memberImage->getClientOriginalExtension();
+            $filename = time() . '.' . $extention;
+            $memberImage->move('assets/img/', $filename);
+            $member->avatar = $filename;
+        }
 
-        DB::table('members')->where('memberID', '=', $request->memberID)->update([
-            'memberFullname' => $request->memberFullname,
-            'memberUsername' => $request->memberUsername,
-            'memberDescription' => $request->memberDescription,
-            'memberTelno' => $request->memberTelno,
-            'memberEmail' => $request->memberEmail,
-            'memberImage' => $memberImage
-        ]);
+        $member->memberFullname = $request->memberFullname;
+        $member->memberUsername = $request->memberUsername;
+        $member->memberDescription = $request->memberDescription;
+        $member->memberTelno = $request->memberTelno;
+        $member->memberEmail = $request->memberEmail;
+        $member->memberImage = $memberImage;
+
+        $member->update();
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');
     }
