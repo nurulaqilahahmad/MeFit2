@@ -103,7 +103,7 @@
                 <p>Subscribe one of these</p>
             </header>
 
-            <div class="row gy-4">
+            <div class="row gy-4" data-aos="fade-left">
                 @foreach ($membershipPlan as $membershipPlan)
                 <div class="col-lg-3 col-md-5 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box">
@@ -117,7 +117,7 @@
                             @csrf
                             <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
                             <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
-                            <div><input class="btn-buy readmore stretched-link mt-auto" type="submit" value="Let's do it!"></div>
+                            <input class="btn-buy readmore stretched-link mt-auto" type="submit" value="Let's do it!">
                         </form>
                     </div>
                 </div>
