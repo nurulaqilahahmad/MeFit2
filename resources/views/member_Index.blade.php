@@ -116,7 +116,7 @@
                             @csrf
                             <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
                             <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
-                            <input class="btn-buy" type="submit" value="Let's do it!">
+                            <input class="btn-buy readmore stretched-link mt-auto" type="submit" value="Let's do it!">
                         </form>
                     </div>
                 </div>
