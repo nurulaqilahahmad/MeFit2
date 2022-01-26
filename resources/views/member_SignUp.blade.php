@@ -64,7 +64,6 @@
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
@@ -135,7 +134,6 @@
             </div>
         </div>
 
-    </section><!-- End Hero -->
 
     <!-- {{url('assets/img/SignUp.png')}} -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
