@@ -194,7 +194,7 @@ class MemberController extends Controller
         if(Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
         }
-        return view('member_SuccessPayment', compact('member'));
+        return redirect('member_SuccessPayment', compact('member'));
     }
 
     public function memberSignOut() {
