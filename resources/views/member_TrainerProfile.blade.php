@@ -53,7 +53,7 @@
                         <ul>
                             <li><a href="{{route('member_Profile')}}">Profile</a></li>
                             <li><a href="{{route('member_ProfileSettings')}}">Profile Settings</a></li>
-                            <li><a href="{{route('memberSignOut')}}">Sign Out</a></li>
+                            <li><a href="{{url('memberSignOut')}}">Sign Out</a></li>
                         </ul>
                     </li>
 
