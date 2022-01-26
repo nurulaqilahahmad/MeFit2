@@ -64,6 +64,7 @@
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
@@ -79,25 +80,21 @@
                             @endif
                             @csrf
                             <div class="row">
-                                <div class="col form-group">
+                                <div class="col-md-6 form-group">
                                     <label data-aos="fade-up" class="justify-content-center"><b>Fullname</b></label>
                                     <input data-aos="fade-up" name="memberFullname" type="text" class="form-control" placeholder="Fullname">
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col form-group">
-                                    <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
-                                    <input data-aos="fade-up" name="memberEmail" type="text" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col form-group">
+                                <div class="col-md-6 form-group">
                                     <label data-aos="fade-up" class="justify-content-center"><b>Username</b></label>
                                     <input data-aos="fade-up" name="memberUsername" type="text" class="form-control" placeholder="Username">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col form-group">
+                                <div class="col-md-6 form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
+                                    <input data-aos="fade-up" name="memberEmail" type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-md-6 form-group">
                                     <label data-aos="fade-up" class="justify-content-center"><b>Telephone No.</b></label>
                                     <input data-aos="fade-up" name="memberTelno" type="text" class="form-control" placeholder="Telephone No.">
                                 </div>
@@ -111,18 +108,21 @@
                             <div class="row">
                                 <div class="col form-group">
                                     <input data-aos="fade-up" class="justify-content-center" type="submit" id="log" value="Create Account">
+                                    <br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col form-group">
                                     <br>
                                     <span data-aos="fade-up"> First Time? <a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
+                                    <br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col form-group">
                                     <br>
                                     <span data-aos="fade-up">Already have an account? <a data-aos="fade-up" href="member_SignIn">Sign In</a> </span>
+                                    <br>
                                 </div>
                             </div>
                         </form>
@@ -134,6 +134,7 @@
             </div>
         </div>
 
+    </section><!-- End Hero -->
 
     <!-- {{url('assets/img/SignUp.png')}} -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
