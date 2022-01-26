@@ -136,7 +136,8 @@
               </div>
 
               <!--Training Session-->
-              <div class="tab-pane fade pt-3" id="training-session">              
+              <div class="tab-pane fade pt-3" id="training-session">
+              <a href="trainer_AddTrainingSession"><button class="btn-buy">Add Training Session</button></a>             
               <br>
               @foreach ($trainingSession as $trainingSession)
                 <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
@@ -176,7 +177,6 @@
                   <div class="col-lg-9 col-md-8">RM {{$trainingSession->trainingSessionCost}}</div>
                 </div>
                 <br>
-                <a href="trainer_AddTrainingSession"><button class="btn-buy">Add Training Session<button></a>
               @endforeach
               </div>
               <!--End of Training Session-->
