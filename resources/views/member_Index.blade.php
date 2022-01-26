@@ -51,6 +51,7 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#pricing">Membership Plan</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Training Session</a></li>
                     <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="member_Profile">Profile</a></li>
@@ -116,7 +117,7 @@
                             @csrf
                             <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
                             <input type="hidden" name="membershipPlanID" id="membershipPlanID" value="{{$membershipPlan->membershipPlanID}}">
-                            <input class="btn-buy readmore stretched-link mt-auto" type="submit" value="Let's do it!">
+                            <div><input class="btn-buy readmore stretched-link mt-auto" type="submit" value="Let's do it!"></div>
                         </form>
                     </div>
                 </div>
