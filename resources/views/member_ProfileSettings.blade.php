@@ -49,9 +49,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="member_Index#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="member_Index#pricing">Membership Plan</a></li>
-          <li><a class="nav-link scrollto" href="member_Index#team">Training Session</a></li>
+          <li><a class="nav-link scrollto" href="member_Index">Home</a></li>
+          <li><a class="nav-link scrollto" href="member_Index">Membership Plan</a></li>
+          <li><a class="nav-link scrollto" href="member_TrainingSessionList">Training Session</a></li>
           <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="member_Profile">Profile</a></li>
@@ -66,8 +66,18 @@
 
     </div>
   </header><!-- End Header -->
-  <br>
-  <br>
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="{{route('member_Index')}}">Home</a></li>
+        <li><a href="{{route('member_Profile')}}">Profile</a></li>
+      </ol>
+      <h2>Settings</h2>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
   <!-- user profile -->
   <section class="section profile">
     @if(Session::has('success'))
