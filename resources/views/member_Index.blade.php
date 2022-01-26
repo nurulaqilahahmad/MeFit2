@@ -139,7 +139,7 @@
                 <p>Choose Based on Your Concern</p>
                 <br>
                 <div class="box">
-                    <a href="member_TrainingSessionList" class="btn-buy"><span>See List</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="member_TrainingSessionList" class="btn-buy readmore stretched-link mt-auto"><span>See List</span><i class="bi bi-arrow-right"></i></a>
                 </div>
             </header>
         </div>
