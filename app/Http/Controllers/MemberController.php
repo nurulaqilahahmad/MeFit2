@@ -168,6 +168,7 @@ class MemberController extends Controller
         $schedule->trainingSessionStartTime = $request->trainingSessionStartTime;
         $schedule->trainingSessionEndTime = $request->trainingSessionEndTime;
         $schedule->trainingSessionDay = $request->trainingSessionDay;
+        $schedule->trainerFullname = $request->trainerFullname;
         $schedule->trainingSessionID = $request->trainingSessionID;
         $schedule->trainerID = $request->trainerID;
         $schedule->memberID = $request->memberID;

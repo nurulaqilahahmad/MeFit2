@@ -86,6 +86,7 @@
                         <input type="hidden" name="trainingSessionEndTime" id="trainingSessionEndTime" value="{{$trainingSession->trainingSessionEndTime}}">
                         <input type="hidden" name="trainingSessionDay" id="trainingSessionDay" value="{{$trainingSession->trainingSessionDay}}">
                         <input type="hidden" name="trainingSessionName" id="trainingSessionName" value="{{$trainingSession->trainingSessionName}}">
+                        <input type="hidden" name="trainerFullname" id="trainerFullname" value="{{$trainingSession->trainerFullname}}">
                         <h3 style="color: #07d5c0;">{{$trainingSession->trainingSessionName}}</h3>
                         <div class="price"><sup>RM</sup>{{$trainingSession->trainingSessionCost}}<span> / mo</span></div>
                         <ul>
