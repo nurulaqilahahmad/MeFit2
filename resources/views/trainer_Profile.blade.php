@@ -137,6 +137,7 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
+              <br>
               <a href="trainer_AddTrainingSession"><button class="btn-buy">Add Training Session<button></a>
               <br>
               @foreach ($trainingSession as $trainingSession)
