@@ -137,7 +137,9 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
+              <div class="text-center text-lg-start">
               <a class="btn-buy" href="trainer_AddTrainingSession"><span>Add Training Session</span></a>
+              </div>
               @foreach ($trainingSession as $trainingSession)
                 <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
 
