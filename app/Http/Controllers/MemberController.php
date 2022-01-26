@@ -153,7 +153,7 @@ class MemberController extends Controller
             $member->memberImage = $filename;
         }
 
-        $member->update();
+        $member->save();
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');
     }
