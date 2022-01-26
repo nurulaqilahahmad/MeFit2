@@ -90,15 +90,22 @@
                                     <input data-aos="fade-up" name="memberPassword" type="password" class="form-control" placeholder="Password">
                                 </div>
                             </div>
-                            <input data-aos="fade-up" class="justify-content-center" type="submit" name="login" id="log" value="Sign In">
-
+                            <div class="row">
+                                <div class="col form-group">
+                                    <input data-aos="fade-up" class="justify-content-center" type="submit" name="login" id="log" value="Sign In">
+                                </div>
+                            </div>
                         </form>
-                        <span data-aos="fade-up"> First Time? </span>
-                        <span><a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
-                        <br> <br>
-
-                        <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
-                        <br> <br>
+                        <div class="row">
+                            <div class="col form-group">
+                                <span data-aos="fade-up"> First Time? </span><span><a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                            <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
+                            </div>
+                        </div>
                     </div>                    
                 </div>
                 <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
