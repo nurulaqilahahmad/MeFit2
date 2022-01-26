@@ -99,10 +99,10 @@
 
                         <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
                         <br> <br>
-                    </div>
-                    <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    </div>                    
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
                         <img src="assets/img/Gym.png" class="img-fluid" alt="">
-                    </div>
                 </div>
             </div>
         </div>
