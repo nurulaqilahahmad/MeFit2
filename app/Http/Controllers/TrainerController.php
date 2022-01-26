@@ -87,12 +87,14 @@ class TrainerController extends Controller
             'newPassword' => 'required'
         ]);
 
-        $trainer = Trainer::where('trainerEmail', '=', $request->trainerEmail)->first();
-        if ($trainer) {
-            $trainer->trainerPassword = Hash::make($request->newPassword);
-            $trainer->update();
+        $trainer = DB::table('trainers')->where('trainerEmail' , '=', $request->trainerEmail)->first();
+        if($trainer) {
+            DB::table('trainers')->where('trainerEmail', $request->trainerEmail)->update([
+                'trainerPassword' => Hash::make($request->newPassword)
+            ]);
             return redirect('trainer_SignIn')->with('success', 'You have successfully changed password. You can now sign in.');
-        } else {
+        }
+        else {
             return back()->with('fail', 'Your email is wrong. Try again.');
         }
     }
