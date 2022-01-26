@@ -139,8 +139,10 @@
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
                 <br>
-                <div class="box" display="table-cell">
-                    <a href="member_SignIn" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">See List <i class="bi bi-arrow-right"></i></a>
+                <div class="text-center text-lg-start">
+                    <div class="box" display="table-cell">
+                        <a href="member_SignIn" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">See List <i class="bi bi-arrow-right"></i></a>
+                    </div>
                 </div>
             </header>
         </div>
