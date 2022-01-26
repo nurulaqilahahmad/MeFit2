@@ -90,7 +90,7 @@
                         <h3 style="color: #07d5c0;">{{$trainingSession->trainingSessionName}}</h3>
                         <div class="price"><sup>RM</sup>{{$trainingSession->trainingSessionCost}}<span> / mo</span></div>
                         <ul>
-                            <li>Trained by {{$trainingSession->trainerFullname}} (<a href="member_TrainerProfile/{{$trainer->trainerID}}">View Profile</a>)</li>
+                            <li>Trained by {{$trainingSession->trainerFullname}} (<a href="member_TrainerProfile/{{$trainingSession->trainerID}}">View Profile</a>)</li>
                             <li>{{$trainingSession->trainingSessionStartTime}} - {{$trainingSession->trainingSessionEndTime}}</li>
                             <li>{{$trainingSession->trainingSessionDay}}</li>
                         </ul>
