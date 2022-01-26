@@ -116,7 +116,7 @@
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
                         <div class="accordion-body">
-                            <li>{{$membershipPlan->membershipPlanDescription}}</li>
+                            {{$membershipPlan->membershipPlanDescription}}
                         </div>
                         <a href="member_SignIn" class="btn-buy readmore stretched-link mt-auto">Let's Do It <i class="bi bi-arrow-right"></i></a>
                     </div>
