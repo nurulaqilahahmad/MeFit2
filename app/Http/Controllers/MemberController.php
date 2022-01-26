@@ -182,7 +182,7 @@ class MemberController extends Controller
         $trainingSession = array();
         if (Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
-            $trainer = Trainer::where('trainerID', '=', $trainerID)->first();
+            $trainer = Trainer::find($trainerID);
             $trainingSession = DB::table('training_sessions')->where('trainerID', '=', $trainerID)
             ->get();
         }
