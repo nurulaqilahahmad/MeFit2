@@ -138,7 +138,10 @@
             <header class="section-header">
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
-                <a href="member_SignIn" class="btn-buy">See List <i class="bi bi-arrow-right"></i></a>
+                <br>
+                <div class="box" display="table-cell">
+                    <a href="member_SignIn" class="btn-buy">See List <i class="bi bi-arrow-right"></i></a>
+                </div>
             </header>
         </div>
 
