@@ -70,7 +70,7 @@
     <div class="container">
       <ol>
         <li><a href="{{route('trainer_Index')}}">Home</a></li>
-        <li><a href="{{route('trainer_Index')}}">Profile</a></li>
+        <li><a href="{{route('trainer_Profile')}}">Profile</a></li>
       </ol>
       <h2>Settings</h2>
     </div>
