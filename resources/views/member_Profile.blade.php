@@ -72,7 +72,7 @@
     <div class="container">
       <ol>
         <li><a href="{{route('member_Index')}}">Home</a></li>
-        <li><a href="{{route('member_Profile')}}">Profile</a></li>
+        <li>Profile</li>
       </ol>
       <h2>{{$member->memberFullname}}</h2>
     </div>
