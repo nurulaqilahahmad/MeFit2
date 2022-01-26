@@ -83,16 +83,13 @@
     @endif
     <div class="row">
       <div class="col-xl-4">
-
         <div class="card">
           <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
             <img class="rounded-circle" src="{{$trainer->trainerImage}}" alt="Profile Picture">
             <br>
             <h2>{{$trainer->trainerFullname}}</h2>
           </div>
         </div>
-
       </div>
 
       <div class="col-xl-8">
@@ -144,7 +141,7 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
-              <a href="trainer_AddTrainingSession"><button class="btn-buy">Add Training Session</button></a>
+              <a href="trainer_AddTrainingSession" class="getstarted scrollto">Add Training Session</a>
               <br>          
               <br>
               @foreach ($trainingSession as $trainingSession)
