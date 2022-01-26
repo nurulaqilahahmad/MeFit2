@@ -137,12 +137,12 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
-              
+              <a href="trainer_AddTrainingSession">
+                    <button class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">Add Training Session<button>
+              </a>
               @foreach ($trainingSession as $trainingSession)
                 <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
-                <a href="trainer_AddTrainingSession">
-                    <button class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">Add Training Session<button>
-                </a>
+                
                 <div class="row">
                   <div class="col-lg-3 col-md-4 label ">Description</div>
                   <div class="col-lg-9 col-md-8">{{$trainingSession->trainingSessionDescription}}</div>
