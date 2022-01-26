@@ -49,7 +49,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto" href="member_Index#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="member_Index#pricing">Membership Plan</a></li>
+                    <li><a class="nav-link scrollto" href="member_Index#hero">Membership Plan</a></li>
                     <li><a class="nav-link scrollto" href="member_Index#team">Training Session</a></li>
                     <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -67,7 +67,7 @@
     </header><!-- End Header -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="team" class="team">
+    <section id="pricing" class="pricing">
         <div class="container" data-aos="fade-up">
             <header class="section-header">
                 <p>Training Session List</p>
