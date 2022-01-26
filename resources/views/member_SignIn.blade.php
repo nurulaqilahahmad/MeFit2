@@ -63,13 +63,12 @@
         </div>
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero d-flex align-items-center">
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <p data-aos="fade-up">SIGN IN AS MEMBER</p>
+                    <h1 data-aos="fade-up">SIGN IN AS MEMBER</h1>
                     <form id="login" method="post" action="/memberSignIn">
                         @if(Session::has('success'))
                         <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
@@ -98,12 +97,15 @@
                         <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
                         <br> <br>
                     </form>
-
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="assets/img/Gym.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{url('assets/img/Gym.png')}}" class="img-fluid" alt=""></div>
+
     </section><!-- End Hero -->
+    
     <!-- {{url('assets/img/SignUp.png')}} -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
