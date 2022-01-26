@@ -134,16 +134,12 @@
     <section id="team" class="team">
 
         <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
+            <header class="section-header">
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
                 <br>
-                <div class="text-center text-lg-start">
-                <a href="member_TrainingSession" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>See List</span>
-                <i class="bi bi-arrow-right"></i>
-                </a>
+                <div class="box">
+                    <a href="member_TrainingSessionList" class="btn-buy"><span>See List</span><i class="bi bi-arrow-right"></i></a>
                 </div>
             </header>
         </div>
