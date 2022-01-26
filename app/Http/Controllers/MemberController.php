@@ -144,7 +144,7 @@ class MemberController extends Controller
             $memberImage = $request->file('memberImage');
             $extention = $memberImage->getClientOriginalExtension();
             $filename = time() . '.' . $extention;
-            $memberImage->move('assets/img/', $filename);
+            $memberImage->move(public_path('/assets/img/'), $filename);
             $member->memberImage = $filename;
         }
 
