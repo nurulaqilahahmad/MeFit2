@@ -66,16 +66,14 @@
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
-
         <div class="container" data-aos="fade-up">
-
             <header class="section-header">
                 <p>Training Session List</p>
             </header>
 
-            <div class="col" data-aos="fade-left">
-                <div class="row-lg-3 row-md-4" data-aos="zoom-in" data-aos-delay="100">
-                    @foreach ($trainingSession as $trainingSession)
+            <div class="row gy-4" data-aos="fade-left">
+                @foreach ($trainingSession as $trainingSession)
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="box">
                         <form action="/bookTrainingSession" method="post">
                         @csrf
@@ -98,8 +96,8 @@
                         </form>
                     </div>
                     <br>
-                    @endforeach
                 </div>
+                @endforeach
             </div>
 
         </div>
