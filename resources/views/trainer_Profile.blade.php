@@ -140,7 +140,6 @@
                   <a href="trainer_AddTrainingSession">
                     <button class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">Add Training Session<button>
                   </a>
-              <div class="text-center text-lg-start">
               <a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" href="trainer_AddTrainingSession"><span>Add Training Session</span></a>
               </div>
               @foreach ($trainingSession as $trainingSession)
