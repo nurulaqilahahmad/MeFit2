@@ -120,7 +120,7 @@ class MemberController extends Controller
             $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', $member->membershipPlanID)
             ->first();
             $schedule = DB::table('schedules')->where('memberID', '=', Session::get('memberID'))->get();
-            $qrcode = QrCode::size(50)->generate('member_SuccessPayment');
+            $qrcode = QrCode::size(50)->generate('http://mefitclub.kqzarqcsyv-wg96g20rd4oy.p.runcloud.link/member_SuccessPayment');
         }
         return view('member_Profile', compact('member', 'membershipPlan', 'schedule', 'qrcode'));        
     }

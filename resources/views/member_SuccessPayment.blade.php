@@ -77,34 +77,7 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-            <a href="member_Index" class="logo d-flex align-items-center">
-                <img src="assets/img/logoMF.png" alt="">
-                <span>MeFit</span>
-            </a>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-
-                    <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="member_Profile">Profile</a></li>
-                            <li><a href="member_ProfileSettings">Profile Settings</a></li>
-                            <li><a href="memberSignOut">Sign Out</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
-        </div>
-    </header><!-- End Header -->
-    <br>
-    <br>
+    
     <!-- user profile -->
     <section class="section profile">
         <div class="row">
