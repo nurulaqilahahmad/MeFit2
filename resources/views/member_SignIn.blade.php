@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">SIGN IN AS MEMBER</h1>
+                    <h2 data-aos="fade-up">SIGN IN AS MEMBER</h1>
                     <form id="login" method="post" action="/memberSignIn">
                         @if(Session::has('success'))
                         <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
