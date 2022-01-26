@@ -43,7 +43,7 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
             <a href="/" class="logo d-flex align-items-center">
-                <img src="public/assets/img/logoMF.png" alt="">
+            <img src="assets/img/logoMF.png" alt="">
                 <span>MeFit</span>
             </a>
 
