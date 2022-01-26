@@ -39,11 +39,7 @@ class TrainerController extends Controller
         $trainer->trainerPassword = Hash::make($request->trainerPassword);
         $trainer->trainerImage = 'assets/img/team/defaultProfilePicture.jfif';
         $registered = $trainer->save();
-        $trainingSession->trainerID = $trainer->trainerID;
-        $trainingSession->trainerFullname = request('trainerFullname');
-        $trainingSession->trainerTelno = request('trainerTelno');
-        $registered2 = $trainingSession->save();
-        if ($registered && $registered2) {
+        if ($registered) {
             return redirect('trainer_SignIn')->with('success', 'You have successfully registered. You can now sign in.');
         } else {
             return back()->with('fail', 'Something went wrong. Try again.');

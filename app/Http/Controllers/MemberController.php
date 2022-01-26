@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class MemberController extends Controller
 {
@@ -114,15 +115,14 @@ class MemberController extends Controller
         $member = array();
         $membershipPlan = array();
         $schedule = array();
-        // $trainingSession = array();
         if(Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
             $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', $member->membershipPlanID)
             ->first();
             $schedule = DB::table('schedules')->where('memberID', '=', Session::get('memberID'))->get();
-            // $trainingSession = DB::table('training_sessions')->where('trainingSessionID', $schedule->trainingSessionID)->get();
+            $qrcode = QrCode::size(50)->generate('member_SuccessPayment');
         }
-        return view('member_Profile', compact('member', 'membershipPlan', 'schedule'));        
+        return view('member_Profile', compact('member', 'membershipPlan', 'schedule', 'qrcode'));        
     }
 
     public function viewMemberProfileSettings() {
