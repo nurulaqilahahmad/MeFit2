@@ -49,7 +49,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-
+          <li><a class="nav-link scrollto" href="member_Index#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="member_Index#pricing">Membership Plan</a></li>
+          <li><a class="nav-link scrollto" href="member_Index#team">Training Session</a></li>
           <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="member_Profile">Profile</a></li>
@@ -57,7 +59,7 @@
               <li><a href="memberSignOut">Sign Out</a></li>
             </ul>
           </li>
-          
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -72,7 +74,7 @@
     <div class="alert alert-success">{{Session::get('success')}}</div>
     @endif
     <div class="row">
-        <div class="col-xl-2"></div>
+      <div class="col-xl-2"></div>
 
       <div class="col-xl-8">
 
@@ -100,7 +102,7 @@
                       <input type="file" id="memberImage" name="memberImage">
                     </div>
                   </div>
-                  
+
 
                   <div class="row mb-3">
                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Fullname</label>
@@ -141,23 +143,23 @@
                     <input class="btn btn-primary" type="submit" value="Save Changes">
                   </div>
                 </form><!-- End Profile Edit Form -->
-              </div>            
               </div>
             </div>
-            <div class="col-xl-2"></div>
-            <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+          </div>
+          <div class="col-xl-2"></div>
+          <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-            <!-- Vendor JS Files -->
-            <script src="{{url('assets/vendor/purecounter/purecounter.js')}}"></script>
-            <script src="{{url('assets/vendor/aos/aos.js')}}"></script>
-            <script src="{{url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-            <script src="{{url('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
-            <script src="{{url('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-            <script src="{{url('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-            <script src="{{url('assets/vendor/php-email-form/validate.js')}}"></script>
+          <!-- Vendor JS Files -->
+          <script src="{{url('assets/vendor/purecounter/purecounter.js')}}"></script>
+          <script src="{{url('assets/vendor/aos/aos.js')}}"></script>
+          <script src="{{url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+          <script src="{{url('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+          <script src="{{url('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+          <script src="{{url('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+          <script src="{{url('assets/vendor/php-email-form/validate.js')}}"></script>
 
-            <!-- Template Main JS File -->
-            <script src="{{url('assets/js/main.js')}}"></script>
+          <!-- Template Main JS File -->
+          <script src="{{url('assets/js/main.js')}}"></script>
 
 </body>
 

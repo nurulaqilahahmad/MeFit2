@@ -48,12 +48,14 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-
+                    <li><a class="nav-link scrollto" href="member_Index#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="member_Index#pricing">Membership Plan</a></li>
+                    <li><a class="nav-link scrollto" href="member_Index#team">Training Session</a></li>
                     <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{route('member_Profile')}}">Profile</a></li>
-                            <li><a href="{{route('member_ProfileSettings')}}">Profile Settings</a></li>
-                            <li><a href="{{url('memberSignOut')}}">Sign Out</a></li>
+                            <li><a href="member_Profile">Profile</a></li>
+                            <li><a href="member_ProfileSettings">Profile Settings</a></li>
+                            <li><a href="memberSignOut">Sign Out</a></li>
                         </ul>
                     </li>
 
