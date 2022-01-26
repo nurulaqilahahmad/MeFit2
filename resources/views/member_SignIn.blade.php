@@ -87,7 +87,7 @@
                         <input data-aos="fade-up" type="password" name="memberPassword" id="memberPassword" placeholder="Password" required="true">
                         <br> <br>
 
-                        <input data-aos="fade-up justify-content-center" type="submit" name="login" id="log" value="Sign In">
+                        <input data-aos="fade-up" class="justify-content-center" type="submit" name="login" id="log" value="Sign In">
                         <br><br>
 
                         <span data-aos="fade-up"> First Time? </span>

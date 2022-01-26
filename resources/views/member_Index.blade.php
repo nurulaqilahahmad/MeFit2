@@ -71,7 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">A WORLD OF FUN WORKOUTS</h1>
+                    <h1 data-aos="fade-up ">A WORLD OF FUN WORKOUTS</h1>
                     <h2 data-aos="fade-up" data-aos-delay="400">Party hard with your trainers squad! Check out our pricing and get ready to sweat it out!</h2>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
