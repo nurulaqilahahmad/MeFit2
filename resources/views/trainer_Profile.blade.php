@@ -141,7 +141,9 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
-              <a href="trainer_AddTrainingSession" class="getstarted scrollto">Add Training Session</a>
+              <div class="read-more">
+                <a href="trainer_AddTrainingSession">Add Training Session</a>
+              </div>
               <br>          
               <br>
               @foreach ($trainingSession as $trainingSession)
