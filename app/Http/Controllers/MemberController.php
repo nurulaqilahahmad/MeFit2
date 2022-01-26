@@ -138,8 +138,12 @@ class MemberController extends Controller
 
     public function editMemberProfile(Request $request) {
 
-        $member = Member::where('memberID', '=', $request->memberID)->first();
-
+        $member = Member::find($request->memberID);
+        $member->memberFullname = $request->memberFullname;
+        $member->memberUsername = $request->memberUsername;
+        $member->memberDescription = $request->memberDescription;
+        $member->memberTelno = $request->memberTelno;
+        $member->memberEmail = $request->memberEmail;
         if($request->hasFile('memberImage'))
         {
             $memberImage = $request->file('memberImage');
@@ -148,14 +152,6 @@ class MemberController extends Controller
             $memberImage->move(public_path('/assets/img/'), $filename);
             $member->memberImage = $filename;
         }
-
-        $member->memberFullname = $request->memberFullname;
-        $member->memberUsername = $request->memberUsername;
-        $member->memberDescription = $request->memberDescription;
-        $member->memberTelno = $request->memberTelno;
-        $member->memberEmail = $request->memberEmail;
-        $member->memberImage = $member->memberImage;
-
         $member->update();
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');

@@ -49,7 +49,6 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-
           <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="member_Profile">Profile</a></li>
@@ -73,40 +72,29 @@
     @endif
     <div class="row">
       <div class="col-xl-4">
-
         <div class="card">
           <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
             <img class="rounded-circle" src="{{$member->memberImage}}" alt="Profile Picture">
             <br>
             <h2>{{$member->memberFullname}}</h2>
-            <div class="social-links mt-2">
-
-            </div>
           </div>
         </div>
-
       </div>
 
       <div class="col-xl-8">
-
         <div class="card">
           <div class="card-body pt-3">
             <!-- Bordered Tabs -->
             <ul class="nav nav-tabs nav-tabs-bordered">
-
               <li class="nav-item">
                 <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Profile</button>
               </li>
-
               <li class="nav-item">
                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#schedule">Schedule</button>
               </li>
-
               <li class="nav-item">
                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#payment">Payment</button>
               </li>
-
             </ul>
             <div class="tab-content pt-2">
 
