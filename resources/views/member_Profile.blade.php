@@ -170,7 +170,7 @@
                 <div class="row">
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanName}}</div>
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanCost}}</div>
-                  <div class="col-lg-3 col-md-4">{{QrCode::size(50)->generate('http://mefitclub.kqzarqcsyv-wg96g20rd4oy.p.runcloud.link/member_SuccessPayment')}}</div>
+                  <div class="col-lg-3 col-md-4">{{QrCode::size(50)->generate('/member_SuccessPayment')}}</div>
                 </div>
               </div>
               <!--End of Payment-->
