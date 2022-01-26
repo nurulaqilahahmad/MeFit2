@@ -90,10 +90,11 @@ class MemberController extends Controller
             'newPassword' => 'required'
         ]);
 
-        $member = Member::where('memberEmail', '=', $request->memberEmail)->first();
+        $member = DB::table('members')->where('memberEmail' , '=', $request->memberEmail)->first;
         if($member) {
-            $member->memberPassword = Hash::make($request->newPassword);
-            $member->update();
+            DB::table('members')->where('memberEmail', $request->memberEmail)->update([
+                'memberPassword' => Hash::make($request->newPassword)
+            ]);
             return redirect('member_SignIn')->with('success', 'You have successfully changed password. You can now sign in.');
         }
         else {
