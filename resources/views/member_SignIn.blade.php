@@ -82,28 +82,33 @@
                                 <div class="col form-group">
                                     <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
                                     <input data-aos="fade-up" name="memberEmail" type="text" class="form-control" placeholder="Email">
+                                    <br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col form-group">
                                     <label data-aos="fade-up" class="justify-content-center"><b>Password</b></label>
                                     <input data-aos="fade-up" name="memberPassword" type="password" class="form-control" placeholder="Password">
+                                    <br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col form-group">
                                     <input data-aos="fade-up" class="justify-content-center" type="submit" name="login" id="log" value="Sign In">
+                                    <br>
                                 </div>
                             </div>
                         </form>
                         <div class="row">
                             <div class="col form-group">
                                 <span data-aos="fade-up"> First Time? </span><span><a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
+                                <br>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col form-group">
                             <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
+                            <br>
                             </div>
                         </div>
                     </div>                    
