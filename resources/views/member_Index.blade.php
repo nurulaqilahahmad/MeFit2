@@ -105,7 +105,7 @@
             <div class="row gy-4">
                 @foreach ($membershipPlan as $membershipPlan)
                 <div class="col-lg-3 col-md-5 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="box">
+                    <div class="post-box">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
