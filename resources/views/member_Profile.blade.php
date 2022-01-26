@@ -159,13 +159,18 @@
 
               <!--Payment-->
               <div class="tab-pane fade show profile-overview" id="payment">
-                @foreach ($trainingSession as $trainingSession)
+                <h5 class="card-title">Membership Plan</h5>
                 <div class="row-lg-3 row-md-4">
-                  <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
-                  <div class="col-lg-3 col-md-4">{{$trainingSession->trainingSessionCost}}</div>
+                  <div class="col-lg-3 col-md-4">Name</div>
+                  <div class="col-lg-3 col-md-4">Cost</div>
+                  <div class="col-lg-3 col-md-4">QR Code</div>
                 </div>
                 <hr>
-                @endforeach
+                <div class="row-lg-3 row-md-4">
+                  <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanName}}</div>
+                  <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanCost}}</div>
+                  <div class="col-lg-3 col-md-4">{{QrCode::size(250)->backgroundColor(35, 46, 59)->redirect('google.com')}}</div>
+                </div>
               </div>
               <!--End of Payment-->
             </div>
