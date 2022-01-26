@@ -97,7 +97,7 @@
                     <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                     <div class="col-md-8 col-lg-9">
                       <label for="myfile">Select a file:</label>
-                      <input type="file" id="memberImage" name="memberImage" value="{{$member->memberImage}}">
+                      <input type="file" id="memberImage" name="memberImage" value="">
                     </div>
                   </div>
                   
