@@ -112,6 +112,7 @@
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
                         <ul>
                             <li class="member-info">{{$membershipPlan->membershipPlanDescription}}</li>
+                            <li></li>
                         </ul>
                         <form action="/memberMembershipPlan" method="post">
                             @csrf
