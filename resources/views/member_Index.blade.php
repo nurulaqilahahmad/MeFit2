@@ -139,8 +139,8 @@
                 <p>Choose Based on Your Concern</p>
                 <br>
             </header>
-            <div class="service-box blue">
-                    <a href="member_TrainingSessionList" class="read-more"><span>See List</span><i class="bi bi-arrow-right"></i></a>
+            <div class="col-md-12 text-center">
+            <button href="member_TrainingSessionList"><span>See List</span><i class="bi bi-arrow-right"></i></button>
             </div>
         </div>
 
