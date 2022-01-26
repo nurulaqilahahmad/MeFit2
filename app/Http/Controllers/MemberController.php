@@ -28,11 +28,13 @@ class MemberController extends Controller
     public function viewTrainingSessionList() {
         $member = array();
         $trainingSession = array();
+        $trainer = array();
         if(Session::has('memberID')) {
             $member = Member::where('memberID', '=', Session::get('memberID'))->first();
-            $trainingSession = DB::table('training_sessions')->where('trainingSessionName', '!=', null)->get(); 
+            $trainingSession = DB::table('training_sessions')->where('trainingSessionName', '!=', null)->get();
+            $trainer = Trainer::where('trainerID', '=', $trainingSession->trainerID)->first();
         }
-        return view('member_TrainingSessionList', compact('member', 'trainingSession'));
+        return view('member_TrainingSessionList', compact('member', 'trainingSession', 'trainer'));
     }
     
     public function viewMemberSignUp() {
