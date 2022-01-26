@@ -153,7 +153,6 @@ class MemberController extends Controller
         $member->memberDescription = $request->memberDescription;
         $member->memberTelno = $request->memberTelno;
         $member->memberEmail = $request->memberEmail;
-        $member->memberImage = $memberImage;
 
         $member->update();
 
