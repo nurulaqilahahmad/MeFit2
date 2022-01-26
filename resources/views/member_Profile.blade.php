@@ -67,7 +67,7 @@
   <br>
   <br>
   <!-- user profile -->
-  <section class="section profile">
+  <section class="section profile" id="hero">
     @if(Session::has('success'))
     <div class="alert alert-success">{{Session::get('success')}}</div>
     @endif
