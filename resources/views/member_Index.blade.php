@@ -49,7 +49,8 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#pricing">Membership Plan</a></li>
                     <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="member_Profile">Profile</a></li>
@@ -97,13 +98,13 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <h2>Pricing</h2>
-                <p>Check our Pricing</p>
+                <h2>Membership Plan</h2>
+                <p>Subscribe one of these</p>
             </header>
 
-            <div class="row">
+            <div class="row gy-4">
                 @foreach ($membershipPlan as $membershipPlan)
-                <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-3 col-md-5 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
