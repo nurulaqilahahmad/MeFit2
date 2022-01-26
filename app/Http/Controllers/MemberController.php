@@ -189,7 +189,11 @@ class MemberController extends Controller
     }
 
     public function viewMemberSuccessPayment() {
-        return view('member_SuccessPayment');
+        $member = array();
+        if(Session::has('memberID')) {
+            $member = Member::where('memberID', '=', Session::get('memberID'))->first();
+        }
+        return view('member_SuccessPayment', compact('member'));
     }
 
     public function memberSignOut() {

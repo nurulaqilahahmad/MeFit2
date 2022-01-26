@@ -107,9 +107,6 @@
     <br>
     <!-- user profile -->
     <section class="section profile">
-        @if(Session::has('success'))
-        <div class="alert alert-success">{{Session::get('success')}}</div>
-        @endif
         <div class="row">
             <div class="card">
                 <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
