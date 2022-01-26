@@ -67,7 +67,7 @@
     </header><!-- End Header -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <section id="team" class="team">
         <div class="container" data-aos="fade-up">
             <header class="section-header">
                 <p>Training Session List</p>
