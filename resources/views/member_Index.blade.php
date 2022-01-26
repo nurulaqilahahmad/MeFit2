@@ -49,7 +49,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li class="dropdown"><a href="#"><span>{{$member->memberUsername}}</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="member_Profile">Profile</a></li>
@@ -57,7 +57,6 @@
                             <li><a href="memberSignOut">Sign Out</a></li>
                         </ul>
                     </li>
-
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -102,10 +101,10 @@
                 <p>Check our Pricing</p>
             </header>
 
-            <div class="row gy-4" data-aos="fade-left">
+            <div class="row">
                 @foreach ($membershipPlan as $membershipPlan)
                 <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="box" display="table-cell" style="width: 100%">
+                    <div class="box">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
