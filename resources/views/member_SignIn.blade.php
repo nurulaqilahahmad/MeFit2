@@ -102,12 +102,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{url('assets/img/Gym.png')}}" class="img-fluid" alt="">
-        </div>
-        </div>
-        </div>
-
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{url('assets/img/Gym.png')}}" class="img-fluid" alt=""></div>
     </section><!-- End Hero -->
     <!-- {{url('assets/img/SignUp.png')}} -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
