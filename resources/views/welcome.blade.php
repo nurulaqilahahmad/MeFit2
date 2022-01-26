@@ -42,7 +42,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="member_Index" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <img src="{{url('assets/img/logoMF.png')}}" alt="">
                 <span>MeFit</span>
             </a>
