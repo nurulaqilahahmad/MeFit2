@@ -137,7 +137,6 @@
             <header class="section-header">
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
-                <br>
             </header>
             <div class="col-md-12 text-center service-box blue">
                 <a href="member_TrainingSessionList" class="read-more"><span>See List</span><i class="bi bi-arrow-right"></i></a>
