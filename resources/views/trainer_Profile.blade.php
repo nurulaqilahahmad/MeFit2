@@ -64,8 +64,18 @@
 
     </div>
   </header><!-- End Header -->
-  <br>
-  <br>
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="{{route('trainer_Index')}}">Home</a></li>
+        <li>Profile</li>
+      </ol>
+      <h2>{{$trainer->trainerFullname}}</h2>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
   <!-- user profile -->
   <section class="section profile">
     @if(Session::has('success'))

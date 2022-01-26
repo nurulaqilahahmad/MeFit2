@@ -49,7 +49,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li class="dropdown"><a href="#"><span>{{$trainer->trainerUsername}}</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="trainer_Profile">Profile</a></li>
@@ -64,6 +64,25 @@
 
         </div>
     </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up ">A WORLD OF FUN WORKOUTS</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Party hard with your trainers squad! Check out our pricing and get ready to sweat it out!</h2>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="assets/img/Gym.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
 
     <!-- ======= Values Section ======= -->
     <section id="values" class="values">
