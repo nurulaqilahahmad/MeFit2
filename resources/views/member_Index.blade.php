@@ -134,7 +134,7 @@
 
         <div class="container" data-aos="fade-up">
 
-            <header class="section-header">
+        <header class="section-header">
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
                 <br>
