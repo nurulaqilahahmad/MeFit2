@@ -137,7 +137,8 @@ class MemberController extends Controller
     }
 
     public function editMemberProfile(Request $request) {
-        $member = Member::where('memberEmail', '=', $request->memberEmail)->first();
+
+        $member = Member::where('memberID', '=', $request->memberID)->first();
 
         if($request->hasFile('memberImage'))
         {
