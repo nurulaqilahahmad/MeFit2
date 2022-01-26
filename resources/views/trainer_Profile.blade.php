@@ -141,7 +141,10 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
-              <a href="trainer_AddTrainingSession" class="d-flex align-items-center justify-content-center">Add Training Session</a>
+                <div class="row">
+                  <a href="trainer_AddTrainingSession" class="d-flex align-items-center justify-content-center">Add Training Session</a>
+                </div>
+              
               @foreach ($trainingSession as $trainingSession)
                 <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
                 
