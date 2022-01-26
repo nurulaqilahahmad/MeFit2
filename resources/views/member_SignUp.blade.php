@@ -107,6 +107,7 @@
                             </div>
                             <div class="row">
                                 <div class="col form-group">
+                                    <br>
                                     <input data-aos="fade-up" class="justify-content-center" type="submit" id="log" value="Create Account">
                                     <br>
                                 </div>
