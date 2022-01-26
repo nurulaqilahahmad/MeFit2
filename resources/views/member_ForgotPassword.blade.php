@@ -65,39 +65,57 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <p data-aos="fade-up">FORGOT PASSWORD</p>
-          <form id="login" method="post" action="/memberForgotPassword">
-            @csrf
-            <label data-aos="fade-up"><b>Email
-              </b></label>
-            <br>
-            <input data-aos="fade-up" type="text" name="memberEmail" id="memberEmail" placeholder="Email">
-            <br> <br>
-
-            <label data-aos="fade-up"><b> New Password
-              </b></label>
-            <br>
-            <input data-aos="fade-up" type="password" name="newPassword" id="newPassword" placeholder="New Password">
-            <br><br>
-            <input data-aos="fade-up" type="submit" id="log" value="Confirm">
-            <br>
-            <span data-aos="fade-up"><a data-aos="fade-up" href="member_SignIn">Back to Sign In</a> </span>
-          </form>
-
+                    <div class="reply-form" data-aos="fade-up">
+                        <h4>FORGOT PASSWORD</h4>
+                        <form id="login" method="post" action="/memberForgotPassword">
+                            @if(Session::has('success'))
+                            <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
+                            @endif
+                            @if(Session::has('fail'))
+                            <div data-aos="fade-up" class="alert alert-danger">{{Session::get('fail')}}</div>
+                            @endif
+                            @csrf
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
+                                    <input data-aos="fade-up" name="memberEmail" type="text" class="form-control" placeholder="Email">
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>New Password</b></label>
+                                    <input data-aos="fade-up" name="memberPassword" type="password" class="form-control" placeholder="New Password">
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <input data-aos="fade-up" type="submit" id="log" value="Confirm">
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <br>
+                                    <span data-aos="fade-up"><a data-aos="fade-up" href="member_SignIn">Back to Sign In</a> </span>
+                                    <br>
+                                </div>
+                            </div>
+                        </form>
+                    </div>                    
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                        <img src="assets/img/Gym.png" class="img-fluid" alt="">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-      <img src="{{url('assets/img/Gym.png')}}" class="img-fluid" alt="">
-    </div>
-    </div>
-    </div>
 
-  </section><!-- End Hero -->
+    </section><!-- End Hero -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
