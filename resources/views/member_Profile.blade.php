@@ -67,7 +67,7 @@
   <br>
   <br>
   <!-- user profile -->
-  <section class="section profile" id="hero">
+  <section class="section profile">
     @if(Session::has('success'))
     <div class="alert alert-success">{{Session::get('success')}}</div>
     @endif
@@ -101,6 +101,10 @@
 
               <li class="nav-item">
                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#schedule">Schedule</button>
+              </li>
+
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#schedule">Payment</button>
               </li>
 
             </ul>
@@ -152,6 +156,18 @@
                 <hr>
                 @endforeach
               <!--End of Schedule-->
+
+              <!--Payment-->
+              <div class="tab-pane fade show profile-overview" id="payment">
+                @foreach ($trainingSession as $trainingSession)
+                <div class="row-lg-3 row-md-4">
+                  <h5 class="card-title">{{$trainingSession->trainingSessionName}}</h5>
+                  <div class="col-lg-3 col-md-4">{{$trainingSession->trainingSessionCost}}</div>
+                </div>
+                <hr>
+                @endforeach
+              </div>
+              <!--End of Payment-->
             </div>
 
             <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
