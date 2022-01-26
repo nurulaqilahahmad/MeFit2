@@ -143,7 +143,7 @@
               <div class="tab-pane fade pt-3" id="training-session">
                 <div class="entry-content">
                   <div class="read-more">
-                    <a href="trainer_AddTrainingSession" class="d-flex align-items-center justify-content-center">Add Training Session</a>
+                    
                   </div>
                 </div>
               
@@ -183,6 +183,11 @@
                 <div class="row">
                   <div class="col-lg-3 col-md-4 label">Cost</div>
                   <div class="col-lg-9 col-md-8">RM {{$trainingSession->trainingSessionCost}}</div>
+                </div>
+                <br>
+
+                <div class="row">
+                  <a href="trainer_AddTrainingSession" class="btn-buy">Add Training Session</a>
                 </div>
                 <br>
               @endforeach
