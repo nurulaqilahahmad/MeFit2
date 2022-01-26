@@ -90,7 +90,7 @@ class MemberController extends Controller
             'newPassword' => 'required'
         ]);
 
-        $member = DB::table('members')->where('memberEmail' , '=', $request->memberEmail)->first;
+        $member = DB::table('members')->where('memberEmail' , '=', $request->memberEmail)->first();
         if($member) {
             DB::table('members')->where('memberEmail', $request->memberEmail)->update([
                 'memberPassword' => Hash::make($request->newPassword)
