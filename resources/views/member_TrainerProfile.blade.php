@@ -65,8 +65,19 @@
 
         </div>
     </header><!-- End Header -->
-    <br>
-    <br>
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="member_Index#pricing">Home</a></li>
+                <li><a href="member_TrainingSessionList">Training Session</a></li>
+                <li>Profile</li>
+            </ol>
+            <h2>{{$trainer->trainerFullname}}</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
     <!-- user profile -->
     <section class="section profile">
         <div class="row">
@@ -181,19 +192,19 @@
                 </div>
             </div>
         </div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="{{url('assets/vendor/purecounter/purecounter.js')}}"></script>
-    <script src="{{url('assets/vendor/aos/aos.js')}}"></script>
-    <script src="{{url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{url('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
-    <script src="{{url('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-    <script src="{{url('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-    <script src="{{url('assets/vendor/php-email-form/validate.js')}}"></script>
+        <!-- Vendor JS Files -->
+        <script src="{{url('assets/vendor/purecounter/purecounter.js')}}"></script>
+        <script src="{{url('assets/vendor/aos/aos.js')}}"></script>
+        <script src="{{url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{url('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+        <script src="{{url('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+        <script src="{{url('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+        <script src="{{url('assets/vendor/php-email-form/validate.js')}}"></script>
 
-    <!-- Template Main JS File -->
-    <script src="{{url('assets/js/main.js')}}"></script>
+        <!-- Template Main JS File -->
+        <script src="{{url('assets/js/main.js')}}"></script>
 
 </body>
 
