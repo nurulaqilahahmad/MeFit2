@@ -110,7 +110,7 @@
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
                         <ul>
-                            <li class="member-info post-title">{{$membershipPlan->membershipPlanDescription}}</li>
+                            <li class="member-info">{{$membershipPlan->membershipPlanDescription}}</li>
                         </ul>
                         <form action="/memberMembershipPlan" method="post">
                             @csrf
