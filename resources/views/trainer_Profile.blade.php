@@ -141,8 +141,10 @@
 
               <!--Training Session-->
               <div class="tab-pane fade pt-3" id="training-session">
-                <div class="row">
-                  <a href="trainer_AddTrainingSession" class="d-flex align-items-center justify-content-center">Add Training Session</a>
+                <div class="entry-content">
+                  <div class="row">
+                    <a href="trainer_AddTrainingSession" class="d-flex align-items-center justify-content-center">Add Training Session</a>
+                  </div>
                 </div>
               
               @foreach ($trainingSession as $trainingSession)
