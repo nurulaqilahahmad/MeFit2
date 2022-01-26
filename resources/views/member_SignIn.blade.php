@@ -100,14 +100,16 @@
                             </div>
                             <div class="row">
                                 <div class="col form-group">
+                                    <br>
                                     <span data-aos="fade-up"> First Time? <a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
                                     <br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col form-group">
-                                <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
-                                <br>
+                                    <br>
+                                    <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
+                                    <br>
                                 </div>
                             </div>
                         </form>
