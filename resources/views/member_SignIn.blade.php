@@ -64,38 +64,47 @@
     </header><!-- End Header -->
 
     <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
 
-        <div class="reply-form">
-            <h4>SIGN IN AS MEMBER</h4>
-            <form id="login" method="post" action="/memberSignIn">
-                @if(Session::has('success'))
-                <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
-                @endif
-                @if(Session::has('fail'))
-                <div data-aos="fade-up" class="alert alert-danger">{{Session::get('fail')}}</div>
-                @endif
-                @csrf
-                <div class="row">
-                    <div class="col form-group">
-                        <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
-                        <input name="memberEmail" type="text" class="form-control" placeholder="Email">
+                    <div class="reply-form" data-aos="fade-up">
+                        <h4>SIGN IN AS MEMBER</h4>
+                        <form id="login" method="post" action="/memberSignIn">
+                            @if(Session::has('success'))
+                            <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
+                            @endif
+                            @if(Session::has('fail'))
+                            <div data-aos="fade-up" class="alert alert-danger">{{Session::get('fail')}}</div>
+                            @endif
+                            @csrf
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
+                                    <input data-aos="fade-up" name="memberEmail" type="text" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Password</b></label>
+                                    <input data-aos="fade-up" name="memberPassword" type="password" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <input data-aos="fade-up" class="justify-content-center" type="submit" name="login" id="log" value="Sign In">
+
+                        </form>
+                        <span data-aos="fade-up"> First Time? </span>
+                        <span><a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
+                        <br> <br>
+
+                        <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
+                        <br> <br>
+                    </div>
+                    <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                        <img src="assets/img/Gym.png" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col form-group">
-                        <label data-aos="fade-up" class="justify-content-center"><b>Password</b></label>
-                        <input name="memberPassword" type="password" class="form-control" placeholder="Password">
-                    </div>
-                </div>
-                <input data-aos="fade-up" class="justify-content-center" type="submit" name="login" id="log" value="Sign In">
-
-            </form>
-            <span data-aos="fade-up"> First Time? </span>
-            <span><a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
-            <br> <br>
-
-            <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
-            <br> <br>
+            </div>
         </div>
 
     </section><!-- End Hero -->
