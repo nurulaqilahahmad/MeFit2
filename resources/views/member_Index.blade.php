@@ -138,8 +138,8 @@
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
                 <br>
-                <div class="box">
-                    <a href="member_TrainingSessionList" class="btn-buy readmore stretched-link mt-auto"><span>See List</span><i class="bi bi-arrow-right"></i></a>
+                <div class="service-box blue">
+                    <a href="member_TrainingSessionList" class="read-more"><span>See List</span><i class="bi bi-arrow-right"></i></a>
                 </div>
             </header>
         </div>
