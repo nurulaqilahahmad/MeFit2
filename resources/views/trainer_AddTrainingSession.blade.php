@@ -48,19 +48,19 @@
       </a>
 
       <nav id="navbar" class="navbar">
-        <ul>
+                <ul>
+                    <li><a class="nav-link scrollto active" href="trainer_Index">Home</a></li>
+                    <li class="dropdown"><a href="#"><span>{{$trainer->trainerUsername}}</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="trainer_Profile">Profile</a></li>
+                            <li><a href="trainer_ProfileSettings">Profile Settings</a></li>
+                            <li><a href="trainerSignOut">Sign Out</a></li>
+                        </ul>
+                    </li>
 
-          <li class="dropdown"><a href="#"><span>{{$trainer->trainerUsername}}</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="trainer_Profile">Profile</a></li>
-              <li><a href="trainer_ProfileSettings">Profile Settings</a></li>
-              <li><a href="trainerSignOut">Sign Out</a></li>
-            </ul>
-          </li>
-
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
