@@ -42,7 +42,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="welcome" class="logo d-flex align-items-center">
+            <a href="member_Index" class="logo d-flex align-items-center">
                 <img src="{{url('assets/img/logoMF.png')}}" alt="">
                 <span>MeFit</span>
             </a>
@@ -82,7 +82,7 @@
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
                             <a href="#pricing" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                <span>Get Started</span>
+                                <span>Subscribe</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
@@ -109,70 +109,19 @@
             </header>
 
             <div class="row gy-4" data-aos="fade-left">
-
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="box">
-                        <h3 style="color: #07d5c0;">Gym Subscribtion</h3>
-                        <div class="price"><sup>RM</sup>100<span> / mo</span></div>
-                        <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
+                @foreach ($membershipPlan as $membershipPlan)
+                <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="box" display="table-cell">
+                        <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
+                        <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
+                        <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
                         <ul>
-                            <li>Full access to Gym</li>
-                            <!-- <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li> -->
-                            <li class="na">Class</li>
-                            <li class="na">Trainer</li>
+                            <li>{{$membershipPlan->membershipPlanDescription}}</li>
                         </ul>
-                        <a href="#" class="btn-buy">Let's do it!</a>
+                        <a href="member_SignIn" class="btn-buy"><button>Let's Do It <i class="bi bi-arrow-right"></i></button></a>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="box">
-                        <span class="featured">Recommended</span>
-                        <h3 style="color: #65c600;">Starter Plan</h3>
-                        <div class="price"><sup>RM</sup>150<span> / mo</span></div>
-                        <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
-                        <ul>
-
-
-                            <li>2 classes</li>
-                            <li>Full acces to gym</li>
-                            <li class="na">Trainer</li>
-                        </ul>
-                        <a href="#" class="btn-buy">Let's do it!</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="box">
-                        <h3 style="color: #ff901c;">HIIT packages</h3>
-                        <div class="price"><sup>RM</sup>200<span> / mo</span></div>
-                        <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
-                        <ul>
-
-                            <li>can join 5 classes</li>
-                            <li>Full access to gym</li>
-                            <li>Trainer</li>
-                        </ul>
-                        <a href="#" class="btn-buy">Let's do it!</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="box">
-                        <h3 style="color: #ff0071;">Ultimate Plan</h3>
-                        <div class="price"><sup>RM</sup>300<span> / 2mo</span></div>
-                        <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
-                        <ul>
-
-                            <li>Full access to gym</li>
-                            <li>Full access to classes</li>
-                            <li>Trainer</li>
-                        </ul>
-                        <a href="#" class="btn-buy">Let's do it!</a>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
         </div>
@@ -187,104 +136,15 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <h2>Trainer</h2>
+                <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
             </header>
 
             <div class="row gy-4">
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="assets/img/team/Trainer1.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <a href="trainerSchedule1">
-                                <h4>Gong Yoo</h4>
-                            </a>
-                            <span>Tough Trainer</span>
-                            <p>Sometimes, you might not respond well to the over-the-top positive and energetic attitude that some personal trainers have to offer. If you prefer a tough trainer, one that won’t allow you to make any kinds of excuses, then this one might be the one for you.
-
-                                They truly believe and live by the famous “no pain, no gain” quote. Their methods are old school, but you will get results in no time.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="assets/img/team/Trainer2.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <a href="trainerSchedule2">
-                                <h4>Yoo In Na</h4>
-                            </a>
-                            <span>Cardio Trainer</span>
-                            <p>The name says it all. These trainers know everything when it comes to losing weight and burning fat through cardio training. They love making their hearts race and know just how to help you increase resistance.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                    <a href="trainerSchedule.html">
-                        <div class="member">
-                    </a>
-                    <div class="member-img">
-                        <img src="assets/img/team/Trainer3.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <a href="trainerSchedule3">
-                            <h4>Kim Jisoo</h4>
-                        </a>
-                        <span>Lifestyle Trainer</span>
-                        <p>People looking for immediate results make drastic changes that are difficult to upkeep, such as a restrictive diet and hardcore workouts. The issue with this is that, once people achieve their results, they fall back into old habits, losing all the progress they had worked towards.
-
-                            Lifestyle trainers don’t just make you gain those results you’re looking for but also helps you adjust your entire lifestyle. They help you adopt a new way of living that promotes health as well as mental wellbeing.</p>
-                    </div>
+                <div class="text-center text-lg-start">
+                <a href="member_SignIn"><button class="btn-buy">See List <i class="bi bi-arrow-right"></i></button></a>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="assets/img/team/Trainer4.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <a href="trainerSchedule4">
-                            <h4>Jung Hae-in</h4>
-                        </a>
-                        <span>Physique Trainers</span>
-                        <p>They know how to target your muscles and work them well in order to help you achieve that body-building figure you want. They also are certified in advising you what kinds of foods you should eat to promote muscle growth.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
         </div>
 
     </section><!-- End Team Section -->
