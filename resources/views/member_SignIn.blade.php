@@ -98,19 +98,19 @@
                                     <br>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <span data-aos="fade-up"> First Time? <a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
+                                <br>
+                                </div>
+                            </div>
                         </form>
-                        <div class="row">
-                            <div class="col form-group">
-                                <span data-aos="fade-up"> First Time? <a data-aos="fade-up" href="member_SignUp">Sign Up</a> </span>
-                                <br><br>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col form-group">
-                            <span><a data-aos="fade-up" href="member_ForgotPassword">Forgot Password?</a> </span>
-                            <br><br>
-                            </div>
-                        </div>
                     </div>                    
                 </div>
                 <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
