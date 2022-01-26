@@ -169,7 +169,6 @@
                 <div class="row-lg-3 row-md-4">
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanName}}</div>
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanCost}}</div>
-                  <div class="col-lg-3 col-md-4">{{QrCode::size(250)->backgroundColor(35, 46, 59)->redirect('google.com')}}</div>
                 </div>
               </div>
               <!--End of Payment-->
