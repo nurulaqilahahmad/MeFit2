@@ -137,12 +137,15 @@ class MemberController extends Controller
     }
 
     public function editMemberProfile(Request $request) {
-        if($request->hasFile('memberImage')){
-            $memberImage = $request->file('memberImage');
-            $extention = $memberImage->getClientOriginalExtension();
-            $filename = time() . '.' . $extention;
-            $memberImage->move('assets/img/', $filename);
-        }
+        // if($request->hasFile('memberImage')){
+        //     $memberImage = $request->file('memberImage');
+        //     $extention = $memberImage->getClientOriginalExtension();
+        //     $filename = time() . '.' . $extention;
+        //     $memberImage->move('assets/img/', $filename);
+        // }
+
+        $memberImage = time().'.'.$request->memberImage->extension();     
+        $request->image->move(public_path('images'), $memberImage);
 
         DB::table('members')->where('memberID', '=', $request->memberID)->update([
             'memberFullname' => $request->memberFullname,
@@ -150,7 +153,7 @@ class MemberController extends Controller
             'memberDescription' => $request->memberDescription,
             'memberTelno' => $request->memberTelno,
             'memberEmail' => $request->memberEmail,
-            'memberImage' => $filename
+            'memberImage' => $memberImage
         ]);
 
         return redirect('member_Profile')->with('success', 'Your profile has updated');
