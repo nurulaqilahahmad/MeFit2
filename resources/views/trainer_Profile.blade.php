@@ -87,12 +87,9 @@
         <div class="card">
           <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-            <img class="rounded-circle" src="{{$trainer->trainerImage}}" alt="Profile Picture">
+            <img src="{{$trainer->trainerImage}}" class="rounded-circle" alt="Profile Picture">
             <br>
             <h2>{{$trainer->trainerFullname}}</h2>
-            <div class="social-links mt-2">
-
-            </div>
           </div>
         </div>
 
