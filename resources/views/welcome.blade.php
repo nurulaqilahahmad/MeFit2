@@ -104,21 +104,21 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <h2>Pricing</h2>
-                <p>Check our Pricing</p>
+                <h2>Membership Plan</h2>
+                <p>Subscribe one of these</p>
             </header>
 
             <div class="row gy-4" data-aos="fade-left">
                 @foreach ($membershipPlan as $membershipPlan)
-                <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="box" display="table-cell">
+                <div class="col-lg-3 col-md-5 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="box">
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
-                        <ul>
+                        <div class="accordion-body">
                             <li>{{$membershipPlan->membershipPlanDescription}}</li>
-                        </ul>
-                        <a href="member_SignIn" class="btn-buy">Let's Do It <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <a href="member_SignIn" class="btn-buy readmore stretched-link mt-auto">Let's Do It <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 @endforeach
@@ -138,13 +138,10 @@
             <header class="section-header">
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
-                <br>
-                <div class="text-center text-lg-start">
-                    <div class="box" display="table-cell">
-                        <a href="member_SignIn" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">See List <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
             </header>
+            <div class="col-md-12 text-center service-box blue">
+                <a href="member_SignIn" class="read-more"><span>See List</span><i class="bi bi-arrow-right"></i></a>
+            </div>
         </div>
 
     </section><!-- End Team Section -->
