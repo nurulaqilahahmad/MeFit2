@@ -65,61 +65,78 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero d-flex align-items-center">
-
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <p data-aos="fade-up">SIGN UP AS TRAINER</p>
-                    <form id="login" method="post" action="/trainerCreate">
-                        @if(Session::has('success'))
-                        <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
-                        @endif
-                        @if(Session::has('fail'))
-                        <div data-aos="fade-up" class="alert alert-danger">{{Session::get('fail')}}</div>
-                        @endif
-                        @csrf
-                        <label data-aos="fade-up"><b>Fullname</b></label>
-                        <br>
-                        <input data-aos="fade-up" type="text" name="trainerFullname" id="trainerFullname" placeholder="Fullname" required="true">
-                        <br>
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
 
-                        <label data-aos="fade-up"><b>Email</b></label>
-                        <br>
-                        <input data-aos="fade-up" type="text" name="trainerEmail" id="trainerEmail" placeholder="Email" required="true">
-                        <br>
-
-                        <label data-aos="fade-up"><b>Username</b></label>
-                        <br>
-                        <input data-aos="fade-up" type="text" name="trainerUsername" id="trainerUsername" placeholder="Username" required="true">
-                        <br>
-
-                        <label data-aos="fade-up"><b>Telephone No.</b></label>
-                        <br>
-                        <input data-aos="fade-up" type="text" name="trainerTelno" id="trainerTelno" placeholder="Telephone No." required="true">
-                        <br>
-
-                        <label data-aos="fade-up"><b>Password</b></label>
-                        <br>
-                        <input data-aos="fade-up" type="password" name="trainerPassword" id="trainerPassword" placeholder="Password" required="true">
-                        <br><br>
-
-                        <input data-aos="fade-up" type="submit" id="log" value="Create Account">
-                        <br>
-
-                        <span data-aos="fade-up">Already have an account? <a data-aos="fade-up" href="trainer_SignIn">Sign In</a> </span>
-                        <br>
-                    </form>
-
+                    <div class="reply-form" data-aos="fade-up">
+                        <h4>SIGN UP AS TRAINER</h4>
+                        <form id="login" method="post" action="/trainerCreate">
+                            @if(Session::has('success'))
+                            <div data-aos="fade-up" class="alert alert-success">{{Session::get('success')}}</div>
+                            @endif
+                            @if(Session::has('fail'))
+                            <div data-aos="fade-up" class="alert alert-danger">{{Session::get('fail')}}</div>
+                            @endif
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Fullname</b></label>
+                                    <input data-aos="fade-up" name="trainerFullname" type="text" class="form-control" placeholder="Fullname">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Username</b></label>
+                                    <input data-aos="fade-up" name="trainerUsername" type="text" class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
+                                    <input data-aos="fade-up" name="trainerEmail" type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Telephone No.</b></label>
+                                    <input data-aos="fade-up" name="trainerTelno" type="text" class="form-control" placeholder="Telephone No.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label data-aos="fade-up" class="justify-content-center"><b>Password</b></label>
+                                    <input data-aos="fade-up" name="trainerPassword" type="password" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <br>
+                                    <input data-aos="fade-up" class="justify-content-center" type="submit" id="log" value="Create Account">
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <br>
+                                    <span data-aos="fade-up"> First Time? <a data-aos="fade-up" href="trainer_SignUp">Sign Up</a> </span>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <br>
+                                    <span data-aos="fade-up">Already have an account? <a data-aos="fade-up" href="trainer_SignIn">Sign In</a> </span>
+                                    <br>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="assets/img/Gym.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/Gym.png" class="img-fluid" alt="">
-        </div>
-        </div>
-        </div>
 
     </section><!-- End Hero -->
+
     <!-- {{url('assets/img/SignUp.png')}} -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
