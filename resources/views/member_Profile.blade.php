@@ -162,15 +162,15 @@
               <div class="tab-pane fade show profile-overview" id="payment">
                 <h5 class="card-title">Membership Plan</h5>
                 <div class="row">
-                  <div class="col-lg-3 col-md-4">Name</div>
+                  <div class="col-lg-5 col-md-4">Name</div>
                   <div class="col-lg-3 col-md-4">Cost</div>
-                  <div class="col-lg-3 col-md-4">QR Code</div>
+                  <div class="col-lg-4 col-md-4">QR Code</div>
                 </div>
                 <hr>
                 <div class="row">
-                  <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanName}}</div>
+                  <div class="col-lg-5 col-md-4">{{$membershipPlan->membershipPlanName}}</div>
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanCost}}</div>
-                  <div class="col-lg-3 col-md-4">{{QrCode::size(50)->redirect('google.com')}}</div>
+                  <div class="col-lg-4 col-md-4">{{QrCode::size(50)->redirect('google.com')}}</div>
                 </div>
               </div>
               <!--End of Payment-->
