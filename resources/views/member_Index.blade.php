@@ -138,10 +138,10 @@
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
                 <br>
-                <div class="service-box blue">
-                    <a href="member_TrainingSessionList" class="read-more"><span>See List</span><i class="bi bi-arrow-right"></i></a>
-                </div>
             </header>
+            <div class="service-box blue">
+                    <a href="member_TrainingSessionList" class="read-more"><span>See List</span><i class="bi bi-arrow-right"></i></a>
+            </div>
         </div>
 
     </section><!-- End Team Section -->
