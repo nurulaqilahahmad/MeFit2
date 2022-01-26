@@ -144,7 +144,7 @@ class MemberController extends Controller
         //     $memberImage->move('assets/img/', $filename);
         // }
 
-        $memberImage = time().'.'.$request->memberImage->extension();     
+        $memberImage = time().'.'.$request->memberImage->getClientOriginalExtension();     
         $request->image->move(public_path('images'), $memberImage);
 
         DB::table('members')->where('memberID', '=', $request->memberID)->update([
