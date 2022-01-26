@@ -138,7 +138,7 @@ class MemberController extends Controller
 
     public function editMemberProfile(Request $request) {
 
-        $member = Member::find($request->memberID);
+        $member = Member::where('memberID', '=', $request->memberID);
         $member->memberFullname = $request->memberFullname;
         $member->memberUsername = $request->memberUsername;
         $member->memberDescription = $request->memberDescription;
