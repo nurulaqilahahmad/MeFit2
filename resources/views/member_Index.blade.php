@@ -137,13 +137,13 @@
             <header class="section-header">
                 <h2>Training Session</h2>
                 <p>Choose Based on Your Concern</p>
-            </header>
-
-            <div class="row gy-4">
+                <br>
                 <div class="text-center text-lg-start">
-                <a href="member_TrainingSessionList"><button class="btn-buy">See List <i class="bi bi-arrow-right"></i></button></a>
+                    <div class="box" display="table-cell">
+                        <a href="member_SignIn" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">See List <i class="bi bi-arrow-right"></i></a>
+                    </div>
                 </div>
-            </div>
+            </header>
         </div>
 
     </section><!-- End Team Section -->
