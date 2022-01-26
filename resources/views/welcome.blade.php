@@ -108,7 +108,7 @@
                 <p>Check our Pricing</p>
             </header>
 
-            <div class="row gy-4" data-aos="fade-left" style="height: 50%">
+            <div class="row gy-4" data-aos="fade-left" style="height: 40%">
                 @foreach ($membershipPlan as $membershipPlan)
                 <div class="col-lg-3 col-md-5" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box" display="table-cell">
