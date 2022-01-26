@@ -188,6 +188,10 @@ class MemberController extends Controller
         return view('member_TrainerProfile', compact('trainer', 'trainingSession', 'member'));
     }
 
+    public function viewMemberSuccessPayment() {
+        return view('member_SuccessPayment');
+    }
+
     public function memberSignOut() {
         if(Session::has('memberID')) {
             Session::pull('memberID');        

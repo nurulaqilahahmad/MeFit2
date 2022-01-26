@@ -57,4 +57,5 @@ Route::get('/member_ProfileSettings', [MemberController::class, 'viewMemberProfi
 Route::post('/editMemberProfile', [MemberController::class, 'editMemberProfile'])->name('editMemberProfile');
 Route::post('/bookTrainingSession', [MemberController::class, 'bookTrainingSession'])->name('bookTrainingSession');
 Route::get('/member_TrainerProfile/{trainerID}', [MemberController::class, 'viewTrainerProfile'])->name('member_TrainerProfile/{trainerID}');
+Route::get('/member_SuccessPayment', [MemberController::class, 'viewMemberSuccessPayment'])->name('member_SuccessPayment');
 Route::get('/memberSignOut', [MemberController::class, 'memberSignOut']);
