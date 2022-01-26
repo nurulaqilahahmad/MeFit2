@@ -110,9 +110,13 @@
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
-                        <div class="accordion-body">
-                            {{$membershipPlan->membershipPlanDescription}}
-                        </div>
+                        <ul>
+                            <li class="member-info">{{$membershipPlan->membershipPlanDescription}}</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
                         <form action="/memberMembershipPlan" method="post">
                             @csrf
                             <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
