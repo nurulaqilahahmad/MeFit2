@@ -77,12 +77,12 @@
                         <div data-aos="fade-up" class="alert alert-danger">{{Session::get('fail')}}</div>
                         @endif
                         @csrf
-                        <label data-aos="fade-up justify-content-center"><b>Email</b></label>
+                        <label data-aos="fade-up" class="justify-content-center"><b>Email</b></label>
                         <br>
-                        <input data-aos="fade-up justify-content-center" type="text" name="memberEmail" id="memberEmail" placeholder="Email" required="true">
+                        <input data-aos="fade-up" class="justify-content-center" type="text" name="memberEmail" id="memberEmail" placeholder="Email" required="true">
                         <br> <br>
 
-                        <label data-aos="fade-up"><b>Password</b></label>
+                        <label data-aos="fade-up" class="justify-content-center"><b>Password</b></label>
                         <br>
                         <input data-aos="fade-up" type="password" name="memberPassword" id="memberPassword" placeholder="Password" required="true">
                         <br> <br>
