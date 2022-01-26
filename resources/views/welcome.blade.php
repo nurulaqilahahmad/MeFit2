@@ -118,7 +118,7 @@
                         <ul>
                             <li>{{$membershipPlan->membershipPlanDescription}}</li>
                         </ul>
-                        <a href="member_SignIn" class="btn-buy"><button>Let's Do It <i class="bi bi-arrow-right"></i></button></a>
+                        <a href="member_SignIn" class="btn-buy">Let's Do It <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 @endforeach
