@@ -110,13 +110,9 @@
                         <h3 style="color: #07d5c0;">{{$membershipPlan->membershipPlanName}}</h3>
                         <div class="price"><sup>RM</sup>{{$membershipPlan->membershipPlanCost}}<span> / mo</span></div>
                         <img src="{{$membershipPlan->membershipPlanImage}}" class="img-fluid" alt="">
-                        <ul>
-                            <li class="member-info">{{$membershipPlan->membershipPlanDescription}}</li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        <div class="accordion-body">
+                        {{$membershipPlan->membershipPlanDescription}}
+                        </div>
                         <form action="/memberMembershipPlan" method="post">
                             @csrf
                             <input type="hidden" name="memberID" id="memberID" value="{{$member->memberID}}">
@@ -144,9 +140,10 @@
                 <p>Choose Based on Your Concern</p>
                 <br>
                 <div class="text-center text-lg-start">
-                    <div class="box" display="table-cell">
-                        <a href="member_TrainingSessionList" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">See List <i class="bi bi-arrow-right"></i></a>
-                    </div>
+                <a href="member_TrainingSession" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>See List</span>
+                <i class="bi bi-arrow-right"></i>
+                </a>
                 </div>
             </header>
         </div>
