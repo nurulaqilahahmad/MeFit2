@@ -165,13 +165,11 @@
                 <div class="row">
                   <div class="col-lg-3 col-md-4">Name</div>
                   <div class="col-lg-3 col-md-4">Cost</div>
-                  <div class="col-lg-3 col-md-4">QR Code</div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanName}}</div>
                   <div class="col-lg-3 col-md-4">{{$membershipPlan->membershipPlanCost}}</div>
-                  <div class="col-lg-3 col-md-4">{{$qrcode}}</div>
                 </div>
               </div>
               <!--End of Payment-->

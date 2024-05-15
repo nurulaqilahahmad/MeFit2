@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
+// use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class MemberController extends Controller
 {
@@ -120,9 +120,9 @@ class MemberController extends Controller
             $membershipPlan = DB::table('membership_plans')->where('membershipPlanID', $member->membershipPlanID)
             ->first();
             $schedule = DB::table('schedules')->where('memberID', '=', Session::get('memberID'))->get();
-            $qrcode = QrCode::size(50)->generate('http://mefitclub.kqzarqcsyv-wg96g20rd4oy.p.runcloud.link/member_SuccessPayment');
+            // $qrcode = QrCode::size(50)->generate('http://mefitclub.kqzarqcsyv-wg96g20rd4oy.p.runcloud.link/member_SuccessPayment');
         }
-        return view('member_Profile', compact('member', 'membershipPlan', 'schedule', 'qrcode'));        
+        return view('member_Profile', compact('member', 'membershipPlan', 'schedule'));        
     }
 
     public function viewMemberProfileSettings() {
@@ -138,23 +138,44 @@ class MemberController extends Controller
 
     public function editMemberProfile(Request $request) {
 
-        $member = Member::where('memberID', '=', $request->memberID);
-        $member->memberFullname = $request->memberFullname;
-        $member->memberUsername = $request->memberUsername;
-        $member->memberDescription = $request->memberDescription;
-        $member->memberTelno = $request->memberTelno;
-        $member->memberEmail = $request->memberEmail;
+        // $member = Member::where('memberID', '=', $request->memberID);
+        // $member->memberFullname = $request->memberFullname;
+        // $member->memberUsername = $request->memberUsername;
+        // $member->memberDescription = $request->memberDescription;
+        // $member->memberTelno = $request->memberTelno;
+        // $member->memberEmail = $request->memberEmail;
         if($request->hasFile('memberImage'))
         {
             $memberImage = $request->file('memberImage');
             $extention = $memberImage->getClientOriginalExtension();
             $filename = time() . '.' . $extention;
             $memberImage->move(public_path('/assets/img/'), $filename);
-            $member->memberImage = $filename;
+            // $member->memberImage = $filename;
+            DB::table('members')->where('memberID', $request->memberID)->update([
+                'memberFullname' => $request->memberFullname,
+                'memberUsername' => $request->memberUsername,
+                'memberDescription' => $request->memberDescription,
+                'memberTelno' => $request->memberTelno,
+                'memberEmail' => $request->memberEmail,
+                'memberImage' => $filename,
+            ]);
+            return redirect('member_Profile')->with('success', 'Your profile has updated');
         }
-        $member->update();
+        else {
+            // $member = Member::where('memberID', '=', $request->memberID);
+            DB::table('members')->where('memberID', $request->memberID)->update([
+                'memberFullname' => $request->memberFullname,
+                'memberUsername' => $request->memberUsername,
+                'memberDescription' => $request->memberDescription,
+                'memberTelno' => $request->memberTelno,
+                'memberEmail' => $request->memberEmail,
+            ]);
+            return redirect('member_Profile')->with('success', 'Your profile has updated');
+        }
 
-        return redirect('member_Profile')->with('success', 'Your profile has updated');
+        // $member->update();
+
+        // return redirect('member_Profile')->with('success', 'Your profile has updated');
     }
 
     public function bookTrainingSession(Request $request) {
